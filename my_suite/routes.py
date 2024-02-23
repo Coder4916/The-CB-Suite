@@ -4,4 +4,12 @@ from my_suite.models import Game, Review
 
 @my_app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("home.html")
+
+@my_app.route("/reviews")
+def reviews():
+    return render_template("reviews.html")
+
+@my_app.route("/games")
+def games():
+    return render_template("games.html")
