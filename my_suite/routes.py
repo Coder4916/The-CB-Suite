@@ -10,6 +10,10 @@ def home():
 def reviews():
     return render_template("reviews.html")
 
+@my_app.route("/add_review", methods=["GET", "POST"])
+def add_review():
+    return render_template("add_review.html")
+
 @my_app.route("/games")
 def games():
     return render_template("games.html")
