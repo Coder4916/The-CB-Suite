@@ -1,7 +1,7 @@
 from flask import render_template
 from my_suite import my_app, my_database
-from my_suite.models import Game, Review
+from my_suite.models.py import Game, Review
 
-@my_app.route("/base.html")
-def base():
+@my_app.route("/")
+def home():
     return render_template("base.html")
