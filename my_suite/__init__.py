@@ -7,7 +7,7 @@ if os.path.exists("env.py"):
 
 my_app = Flask(__name__)
 my_app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-my_app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+my_app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('SQLALCHEMY_DATABASE_URL')
 
 my_database = SQLAlchemy(my_app)
 
