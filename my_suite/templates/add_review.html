@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Add Review</h3>
+
+<div class="row card">
+    <form class="col-12 card-body" method="POST" action="{{ url_for('add_review') }}">
+        <!-- Reviewer Name-->
+        <div class="row">
+            <div class="col-12 form-control">
+                <input id="review_name" name="review_name" minlength="3" maxlength="25" type="text" required>
+                <label for="review_name">Reviewer Name</label>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-lg btn-success" type="submit">
+                    Add Review
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
