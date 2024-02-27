@@ -25,4 +25,4 @@ def add_game():
 
 @my_app.route("/reviews")
 def reviews():
-    return render_template("reviews.html")
+    return render_template("review.html")
