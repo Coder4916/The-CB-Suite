@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from my_suite import my_app, my_database
 from my_suite.models import Review, Game
+import json
 
 
 @my_app.route("/")
