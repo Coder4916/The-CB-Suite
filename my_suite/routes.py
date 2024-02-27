@@ -11,7 +11,10 @@ def home():
 
 @my_app.route("/games")
 def games():
-    return render_template("games.html")
+    data = []
+    with open("my_suite/data/games.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("games.html", games=data)
 
 
 @my_app.route("/add_game", methods=["GET", "POST"])
