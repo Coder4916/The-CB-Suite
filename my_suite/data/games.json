@@ -2,81 +2,81 @@
         "name": "Street Fighter 6",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2022/12/12/ea593f23/streetfighter6.jpg",
         "platform": "PlayStation 5Xbox Series X/SPlayStation 4PC",
-        "Developer": "Capcom",
-        "Genre": "Fighting",
-        "Release_date": "02 June 2023"
+        "developer": "Capcom",
+        "genre": "Fighting",
+        "release_date": "02 June 2023"
     },
     {
         "name": "Sea of Stars",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/05/02/a5c74762/seaofstars.jpg",
         "platform": "PlayStation 5Xbox Series X/SPlayStation 4Xbox OneSwitchPC",
-        "Developer": "Sabotage",
-        "Genre": "Role-Playing",
-        "Release_date": "29 August 2023"
+        "developer": "Sabotage",
+        "genre": "Role-Playing",
+        "release_date": "29 August 2023"
     },
     {
         "name": "Jusant",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/06/20/7214d55c/jusant.jpg",
         "platform": "PlayStation 5Xbox Series X/SPC",
-        "Developer": "Don't Nod Entertainment",
-        "Genre": "Adventure",
-        "Release_date": "31 October 2023"
+        "developer": "Don't Nod Entertainment",
+        "genre": "Adventure",
+        "release_date": "31 October 2023"
     },
     {
         "name": "Super Mario Bros. Wonder",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/06/21/e230ac14/supermariobroswonder.jpg",
         "platform": "Switch",
-        "Developer": "Nintendo",
-        "Genre": "Platforming",
-        "Release_date": "20 October 2023"
+        "developer": "Nintendo",
+        "genre": "Platforming",
+        "release_date": "20 October 2023"
     },
     {
         "name": "Star Wars Jedi: Survivor",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2022/12/08/d2c80fc4/swjedisurvivor.jpg",
         "platform": "PlayStation 5Xbox Series X/SPlayStation 4Xbox OnePC",
-        "Developer": "Respawn Entertainment",
-        "Genre": "Action",
-        "Release_date": "28 April 2023"
+        "developer": "Respawn Entertainment",
+        "genre": "Action",
+        "release_date": "28 April 2023"
     },
     {
         "name": "Alan Wake 2",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/06/19/009ab276/alanwake2.jpg",
         "platform": "PlayStation 5Xbox Series X/SPC",
-        "Developer": "Remedy Entertainment",
-        "Genre": "Action",
-        "Release_date": "27 October 2023"
+        "developer": "Remedy Entertainment",
+        "genre": "Action",
+        "release_date": "27 October 2023"
     },
     {
         "name": "Resident Evil 4 (Remake)",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/01/26/7b01e7ee/residentevil4.jpg",
         "platform": "PlayStation 5Xbox Series X/SPlayStation VR2PlayStation 4PCMaciOS",
-        "Developer": "Capcom",
-        "Genre": "Action",
-        "Release_date": "24 March 2023"
+        "developer": "Capcom",
+        "genre": "Action",
+        "release_date": "24 March 2023"
     },
     {
         "name": "Marvel's Spider-Man 2",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/06/19/fd3f2ae5/spiderman2.jpeg",
         "platform": "Playstation 5",
-        "Developer": "Insomniac Games",
-        "Genre": "Action",
-        "Release_date": "10 October 2023"
+        "developer": "Insomniac Games",
+        "genre": "Action",
+        "release_date": "10 October 2023"
     },
     {
         "name": "Baldur's Gate 3",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2023/04/13/14c3de75/baldursgate3.jpeg",
         "platform": "PlayStation 5, Xbox Series X/S, PC",
-        "Developer": "Larian Studios",
-        "Genre": "Role-Playing",
-        "Release_date": "03 August 2023"
+        "developer": "Larian Studios",
+        "genre": "Role-Playing",
+        "release_date": "03 August 2023"
     },
     {
         "name": "The Legend of Zelda: Tears of the Kingdom",
         "game_image": "https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2022/09/21/270fc90c/zeldatearsofthekingdom.jpg",
         "platform": "Switch",
-        "Developer": "Nintendo",
-        "Genre": "Action",
-        "Release_date": "12 May 2023"
+        "developer": "Nintendo",
+        "genre": "Action",
+        "release_date": "12 May 2023"
     }
 
 ]
