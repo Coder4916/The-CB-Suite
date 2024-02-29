@@ -10,13 +10,18 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-4">
-                    <h3>{{ loop.index }}. {{ game.name }}</h3>
-                </div>
-                <div class="col-md-8">
-                    <img src="{{ game.game_image }}" alt="" class="carousel-img-width">
+                    <h3>#{{ loop.index }}. {{ game.name }}</h3>
                     <p>Release Date: {{ game.release_date }}</p>
                     <p>Developer: {{ game.developer }}</p>
                     <p>Genre: {{ game.genre }}</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ game.game_image }}" alt="" class="carousel-img-width">
+                </div>
+                <div class="col-4 text-center">
+                    <a href="{{ url_for('add_game') }}" class="btn btn-lg btn-primary">
+                        Add Game <i class="fa-regular fa-comment"></i>
+                    </a>
                 </div>
             </div>
             <hr class="featurette-divider">
@@ -25,22 +30,12 @@
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="text-dark">Previous</span>
+        <span class="text-dark"><i class="fa-solid fa-less-than"></i> Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="text-dark">Next</span>
+        <span class="text-dark">Next <i class="fa-solid fa-greater-than"></i></span>
     </button>
-</div>
-
-
-
-<div class="row">
-    <div class="col-12 text-center">
-        <a href="{{ url_for('add_game') }}" class="btn btn-lg btn-primary">
-            Add Game <i class="fa-regular fa-comment"></i>
-        </a>
-    </div>
 </div>
 
 {% endblock %}
