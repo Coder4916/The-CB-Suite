@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Add Game</h3>
+<h3>Add Review</h3>
 
 <div class="row card">
-    <form class="col-12 card-body" method="POST" action="{{ url_for('add_game') }}">
-        <!-- Game Name-->
+    <form class="col-12 card-body" method="POST" action="{{ url_for('add_review') }}">
+
+        <!-- Review Name-->
         <div class="row">
             <div class="col-12 form-control">
-                <input id="game_name" name="game_name" minlength="3" maxlength="25" type="text" required>
-                <label for="game_name">Game</label>
+                <input id="review_name" name="review_name" minlength="3" maxlength="25" type="text" required>
+                <label for="review_name">Review:</label>
             </div>
         </div>
+        
         <!-- Submit Button-->
         <div class="row">
             <div class="col-12 text-center">
                 <button type="submit" class="btn btn-lg btn-success">
-                    Add Game
+                    Add Review
                 </button>
             </div>
         </div>

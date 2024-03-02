@@ -17,14 +17,14 @@ def games():
     return render_template("games.html", games=data)
 
 
-@my_app.route("/add_game", methods=["GET", "POST"])
-def add_game():
+@my_app.route("/add_review", methods=["GET", "POST"])
+def add_review():
     if request.method == "POST":
-        game = Game(game_name=request.form.get("game_name"))
-        my_database.session.add(game)
+        review = Review(review_name=request.form.get("review_name"))
+        my_database.session.add(review)
         my_database.session.commit()
-        return redirect(url_for("games"))
-    return render_template("add_game.html")
+        return redirect(url_for("reviews"))
+    return render_template("add_review.html")
 
 
 @my_app.route("/reviews")

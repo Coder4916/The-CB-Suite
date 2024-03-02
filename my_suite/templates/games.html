@@ -16,11 +16,11 @@
                     <p>Genre: {{ game.genre }}</p>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ game.game_image }}" alt="" class="carousel-img-width">
+                    <img src="{{ game.game_image }}" class="carousel-img-width">
                 </div>
                 <div class="col-4 text-center">
-                    <a href="{{ url_for('add_game') }}" class="btn btn-lg btn-primary">
-                        Add Game <i class="fa-regular fa-comment"></i>
+                    <a href="{{ url_for('add_review') }}" class="btn btn-lg btn-primary">
+                        Add Review <i class="fa-regular fa-comment"></i>
                     </a>
                 </div>
             </div>
