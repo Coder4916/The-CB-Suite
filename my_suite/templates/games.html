@@ -9,23 +9,20 @@
         <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
             <hr class="featurette-divider">
             <div class="row featurette">
-                <div class="col-md-4">
-                    <h3>#{{ loop.index }}. {{ game.name }}</h3>
-                    <p>Release Date: {{ game.release_date }}</p>
-                    <p>Developer: {{ game.developer }}</p>
-                    <p>Genre: {{ game.genre }}</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="{{ game.game_image }}" class="carousel-img-width">
-                </div>
-                <div class="col-4 text-center">
-                    <a href="{{ url_for('add_review') }}" class="btn btn-lg btn-primary">
-                        Add Review <i class="fa-regular fa-comment"></i>
-                    </a>
+                <div class="col-md-4 card container-fluid" style="width: 18rem;">
+                    <img src="{{ game.game_image }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">#{{ loop.index }}. {{ game.name }}</h5>
+                        <p>Release Date: {{ game.release_date }}</p>
+                        <p>Developer: {{ game.developer }}</p>
+                        <p>Genre: {{ game.genre }}</p>
+                        <a href="{{ url_for('add_review') }}" class="btn btn-primary">Add Review</a>
+                    </div>
                 </div>
             </div>
             <hr class="featurette-divider">
         </div>
+
         {% endfor %}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -37,5 +34,6 @@
         <span class="text-dark">Next <i class="fa-solid fa-greater-than"></i></span>
     </button>
 </div>
+
 
 {% endblock %}
