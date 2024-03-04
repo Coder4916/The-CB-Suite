@@ -6,7 +6,6 @@ class Game(my_database.Model):
     id = my_database.Column(my_database.Integer, primary_key=True)
     game_name = my_database.Column(my_database.String(30), unique=True, nullable=False)
     tasks = my_database.relationship("Review", backref="game", cascade="all, delete", lazy=True)
-    
     def __repr__(self):
         # represents itself
         return self.game_name

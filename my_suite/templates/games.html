@@ -1,39 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Games of 2023</h3>
+<h3>Games</h3>
 
-<div id="carouselExampleRide" class="carousel slide">
-    <div class="carousel-inner">
-        {% for game in games %}
-        <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-4 card container-fluid" style="width: 18rem;">
-                    <img src="{{ game.game_image }}" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">#{{ loop.index }}. {{ game.name }}</h5>
-                        <p>Release Date: {{ game.release_date }}</p>
-                        <p>Developer: {{ game.developer }}</p>
-                        <p>Genre: {{ game.genre }}</p>
-                        <a href="{{ url_for('add_review') }}" class="btn btn-primary">Add Review</a>
-                    </div>
-                </div>
-            </div>
-            <hr class="featurette-divider">
-        </div>
-
-        {% endfor %}
+<div class="row">
+    <div class="col">
+        <a href="{{ url_for('add_game') }}" class="btn btn-large btn-primary">
+            Add Game 
+        </a>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="text-dark"><i class="fa-solid fa-less-than"></i> Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="text-dark">Next <i class="fa-solid fa-greater-than"></i></span>
-    </button>
 </div>
 
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        {% for game in games %}
+        <div class="carousel-item{% if loop.index == 1 %} active{% endif %}">
+            <div class="card container-fluid" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">#{{ loop.index }}.{{ game.game_name }}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 {% endblock %}
