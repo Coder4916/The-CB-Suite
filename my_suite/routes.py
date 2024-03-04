@@ -18,7 +18,12 @@ def games():
 @my_app.route("/add_game", methods=["GET", "POST"])
 def add_game():
     if request.method == "POST":
-        game = Game(game_name=request.form.get("game_name"))
+        game = Game(
+            game_name=request.form.get("game_name"),
+            game_genre=request.form.get("game_genre"),
+            game_developer=request.form.get("game_developer"),
+            game_release_date=request.form.get("game_release_date")
+        )
         my_database.session.add(game)
         my_database.session.commit()
         return redirect(url_for("games"))

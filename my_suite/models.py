@@ -4,7 +4,10 @@ from my_suite import my_database
 class Game(my_database.Model):
     # The Game model
     id = my_database.Column(my_database.Integer, primary_key=True)
-    game_name = my_database.Column(my_database.String(30), unique=True, nullable=False)
+    game_name = my_database.Column(my_database.String(50), unique=True, nullable=False)
+    game_genre = my_database.Column(my_database.String(50), unique=True, nullable=False)
+    game_developer = my_database.Column(my_database.String(50), unique=True, nullable=False)
+    game_release_date = my_database.Column(my_database.String(50), unique=True, nullable=False)
     tasks = my_database.relationship("Review", backref="game", cascade="all, delete", lazy=True)
     def __repr__(self):
         # represents itself

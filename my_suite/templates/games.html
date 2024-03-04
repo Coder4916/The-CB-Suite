@@ -19,8 +19,9 @@
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">#{{ loop.index }}.{{ game.game_name }}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Developer: {{ game.game_developer }}</p>
+                    <p class="card-text">Genre: {{ game.game_genre }}</p>
+                    <p class="card-text">Release Date: {{ game.game_release_date }}</p>
                     <a href="#" class="btn btn-warning">Edit</a>
                     <a href="#" class="btn btn-danger">Delete</a>
                 </div>
