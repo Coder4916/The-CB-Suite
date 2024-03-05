@@ -14,7 +14,6 @@ class Game(my_database.Model):
         return self.game_name
 
 
-
 class Review(my_database.Model):
     # The Review model
     id = my_database.Column(my_database.Integer, primary_key=True)

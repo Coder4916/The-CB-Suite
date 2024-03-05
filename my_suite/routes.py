@@ -15,6 +15,14 @@ def games():
     return render_template("games.html", games=games)
 
 
+@my_app.route("/images")
+def images():
+    data = []
+    with open("my_suite/data/games.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("images.html", games=data)
+
+
 @my_app.route("/add_game", methods=["GET", "POST"])
 def add_game():
     if request.method == "POST":
