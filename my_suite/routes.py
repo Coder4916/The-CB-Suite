@@ -38,5 +38,17 @@ def add_game():
     return render_template("add_game.html")
     
 
+@my_app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
+def edit_game(game_id):
+    game = Game.query.get_or_404(game_id)
+    if request.method == "POST":
+        game.game_name = request.form.get("game_name")
+        my_database.session.commit()
+        return redirect(url_for('games'))
+
+    return render_template("edit_game.html", game=game)
+
+
+
 
 
