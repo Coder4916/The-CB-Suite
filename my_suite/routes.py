@@ -11,13 +11,11 @@ def home():
 
 @my_app.route("/games")
 def games():
+    data = []
+    with open("my_suite/data/images.json", "r") as json_data:
+        data = json.load(json_data)
     games = list(Game.query.order_by(Game.game_name).all())
-    return render_template("games.html", page_title="Games", games=games)
-
-
-@my_app.route("/reviews")
-def reviews():
-    return render_template("reviews.html", page_title="Reviews")
+    return render_template("games.html", page_title="Games", games=games, images=data)
 
 
 @my_app.route("/add_game", methods=["GET", "POST"])
@@ -51,6 +49,26 @@ def delete_game(game_id):
     my_database.session.delete(game)
     my_database.session.commit()
     return redirect(url_for("games"))
+
+
+@my_app.route("/reviews")
+def reviews():
+    return render_template("reviews.html", page_title="Reviews")
+
+
+@my_app.route("/add_review", methods=["GET", "POST"])
+def add_review():
+    games = list(Game.query.order_by(Game.game_name).all())
+    if request.method == "POST":
+        review = Review(
+            review_name=request.form.get("game_name"),
+            review=request.form.get("game_genre"),
+            review_date=request.form.get("game_release_date")
+        )
+        my_database.session.add(game)
+        my_database.session.commit()
+        return redirect(url_for("games"))
+    return render_template("add_game.html", page_title="Add Game")
 
 
 
