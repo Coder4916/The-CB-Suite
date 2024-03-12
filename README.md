@@ -4,7 +4,7 @@
 
 ## **Table of Contents**
 
-- [**Think-In-Space**](#the-cb-suite)
+- [**The CB Suite**](#the-cb-suite)
   - [**Table of Contents**](#table-of-contents)
   - [**Introduction**](#introduction)
   - [**UX Development**](#ux-development)
@@ -64,22 +64,17 @@
 
 ## **Introduction**
 
-The-CB-Suite is a Games Review website designed to give gamers/critics the opportunity to leave reviews based on a selection of games in the current market which are hosted on a variety of consoles. 
+The-CB-Suite is a Games Review website designed to give gamers/critics the opportunity to leave reviews based on a selection of games in the current market which are hosted on a variety of consoles/platforms. 
 
 The site will also provide a service to the user, helping them to gain a better understanding of the gaming market, assisting a user when making a decision based on game purchases.
 
-There is also a blog element to the website, where users/gamers have access to external resources and further information to bolster the sites appeal.
+There will also be a blog element to the website, where users will have access to external resources and further information to bolster the sites appeal.
 
-The main requirement of this CI project was to build a responsive and interactive back end site, with the primary objective of making the website simple and easy to use.
+The main requirement of this Code Institute project was to build a responsive and interactive back-end site based around a simple CRUD concept, with the primary objective of making the website simple and easy to use. All information and reviews will be stored in a simple Relational Database.
 
 ## **UX Development**
 
 ### **1. Strategy Plane**
-
-UX research was carried out through discussion with:
-
-- Friends and family
-- Work colleagues
 
 ### **User Stories**
 
@@ -116,22 +111,22 @@ I Researched other gaming review websites available online such as [metacritic](
 
 ### **Project Goals**
 
-The project goal is to provide an interactive back end website, which allows a user to add/edit game reviews on the site. It must be accessible, easy to navigate, and the service provided must be clear and unambiguous.
+The project goal is to provide an interactive back end website, based on a simple CRUD design which will allow a user to create, read, update/edit and delete game reviews on the site. It should be accessible, easy to navigate, and the service provided, clear and unambiguous.
 
 ### **User Goals**
 
-The target audience for this website is primarily gamers and game critics, however, the site should be easily accessible for all, providing clear intent.
+The target audience for this website is primarily gamers and game critics, however, the site should be easily accessible for all, providing clear intent and site content.
 
 Specifically:
 
 - People who require information on the latest games on the market.
 - Anyone interested in gaming.
-- Anybody looking to make a game purchase and who may need guidance.
+- Anybody looking to make a game purchase and may need guidance.
 - The site can also provide a platform for game critics to indirectly communicate with game developers.
 
 User goals when accessing this website include gaining information about the site's games and allow gamers to have the ability to critic the games on offer in the current market. 
 
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
 
 ### **Other Considerations**
 
@@ -140,24 +135,21 @@ The CB Suite is a Customer-To-Customer (C2C) product, where people can share rev
 - Calming and friendly presence
 - Minimal, to the point content
 - Simple design/aesthetics
+- Adds a social element
 
 ### **Strategy Table**
 
-Based on the research, goals, and the considerations above, I considered what should be implemented on the website. I mapped the ideas based on their importance (driven by business goals and user needs), and viability (given limited time and resources), to determine which ideas were going to be included and which were not:
+Based on the research, goals, and the considerations above, I considered what should be implemented on the website. I mapped the ideas based on their importance based on user needs and viability (given limited time and resources), to determine which ideas were going to be included and which were not:
 
 | Features/Ideas             | Importance | Viability |
 | -------------------------- |:----------:| ---------:|
-|  A. Coach bio              |      5     |     5     |
-|  B. Code of Ethics         |      5     |     5     |
-|  C. Contact Details        |      5     |     5     |
-|  D. Testimonials           |      4     |     5     |
-|  E. FAQs                   |      4     |     5     |
-|  F. Coaching overview      |      4     |     5     |
-|  G. Links                  |      4     |     4     |
-|  H. Social Media profiles  |      3     |     4     |
-|  I. Guarantees             |      2     |     1     |
-|  J. Mental Health Referal  |      2     |     2     |
-|  K. Feedback Form          |      2     |     3     |
+|  A. Games page             |      5     |     5     |
+|  B. Reviews page           |      5     |     5     |
+|  C. Add review page        |      5     |     5     |
+|  D. Username function      |      4     |     5     |
+|  E. Blog page              |      3     |     4     |
+|  E. Social Media links     |      3     |     5     |
+
 
 [Back to top](#think-in-space)
 
@@ -165,37 +157,34 @@ Based on the research, goals, and the considerations above, I considered what sh
 
 Based on the mapping in Strategy Plane, I decided to include these contents below in the website:
 
-- Coach Bio and background; introduces the user to the coach.
-- How Coaching works; will inform the user of what Life Coaching is, and whether it is the right choice for them.
-- Contact form; which will include a request for a coaching session or further information depending on what the user needs.
-- Frequently Asked Questions; which will further aid the user's decision based on the choice to try out Life Coaching.
-- Location and approach; a map will be included, as well as suggestions based on where coaching could take place.
-- Functionality requirements:
-the user should be able to navigate easily through the website to access all the contents via a navigation menu.
-- The user should have access to the owner's contact details as required
-- The user will be able to access a series of testimonials via a user friendly carousel
+- Games page; introduces the user to the site, and will display the games in a carousel.
+- Reviews page; will display the completed reviews to the user, and will also include an edit and delete review function.
+- Add review page; accessed via the game page, and will give the user the ability to create and read reviews based on any game on the site.
+- Username function; will give a level of security to the site. This will prevent tampering of other reviews, as well as protecting personal reviews.
+- Blog page; will add to the site's usability, providing further gaming info etc.
+- Social media links; gives the user the ability to contact the owner of the site, and gain further info on the site itself, such as any future updates etc.
 
 ### 3. **Structure Plane**
 
-The website must have a simple structure with a user friendly navigation element to reach each page of information. Each site page will be broken down into sections, and organised so that the information tells a story, and leads the user to a contact page if they want to explore the subject further. The pages will have a consistent predictable template to help with usability and accessibility.
+The website's front-end will have a simple structure with a user friendly navigation element to reach each html page. Each page will also utilise template inheritance, sharing a consistant template utilising the web framework Flask. The content specific to each page/child template will be controlled using Flask specific block tags. Layout on child templates will also be controlled using Flask for loop tags.
 
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
 
 ### 4. **Skeleton Plane**
 
-The initial layout and interface of the Website was created using Balsamiq Wireframes. The design/layout and feel of the site was created with UI in mind, which allows immediate interaction in first-time learning, and meets the needs of the intended audience.
+The initial layout and interface of the Website was created using Balsamiq Wireframes. The design/layout and feel of the site was created with UI in mind, which allows immediate interaction in first-time use, and meets the needs of the intended audience.
 
-![Balsamiq-wireframes](/assets/images/Balsamiq-Wireframes.png)
+![Balsamiq-wireframes]()
 
 ### 5. **Surface Plane**
 
 #### **Color Scheme**
 
-The colors used are primarily derived from the logo provided by the website owner. To create a cohesive color scheme from beginning to end, [Color Wheel](https://www.canva.com/colors/color-wheel/), [Color Picker](https://www.google.com/search?q=color+picker&oq=color&aqs=chrome.3.0i67i433i650j69i57j69i59l2j0i67i650l3j69i61.2852j0j7&sourceid=chrome&ie=UTF-8&bshm=rime/1) and [Coolers](https://coolors.co/) were used to identify complementary colours and wider colour palettes that would work on the website.
+The colors used are primarily derived from the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
 
 #### **Typography**
 
-The fonts I used for the website were sourced from [Google Fonts](https://fonts.google.com/). Inc [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) and [Lexend Font](https://fonts.google.com/specimen/Lexend?query=lexend). Lexend used for titles and Roboto for paragraphs/general text. Both fonts are recommended for use for people with dysleia [(Tink 'n' Stink)](https://www.tinknstink.co.uk/blogs/news/why-we-use-the-dyslexia-friendly-font-lexend). After researching [commonly used fallback fonts](https://www.w3schools.com/css/css_font_fallbacks.asp), I decided to use serif, sans serif and monospace as Think-In -Space's fallbacks.
+The fonts I used for the website were sourced from [Start Bootstrap]().
 
 #### **Imagery**
 
