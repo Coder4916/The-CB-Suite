@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>{{ page_title }}</h3>
+
+<div class="row card">
+    <form class="col-sm-12" method="POST" action="{{ url_for('add_review') }}">
+        <!-- Review name -->
+        <div class="row">
+            <div class="input col-sm-6">
+                <i class="fas fa-folder-open prefix"></i>
+                <label for="review_name">Review Name</label>
+                <input id="review_name" name="review_name" type="text" minlength="3" maxlength="50" class="validate" required>
+                
+                <label for="review">Review</label>
+                <input id="review" name="review" type="text" minlength="3" maxlength="50" class="validate" required>
+                
+                <label for="Review_date">Review_date</label>
+                <input id="Review_date" name="Review_date" type="text" minlength="3" maxlength="50" class="validate" required>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-large btn-primary">
+                    Add Review
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

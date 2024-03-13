@@ -61,14 +61,15 @@ def add_review():
     games = list(Game.query.order_by(Game.game_name).all())
     if request.method == "POST":
         review = Review(
-            review_name=request.form.get("game_name"),
-            review=request.form.get("game_genre"),
-            review_date=request.form.get("game_release_date")
+            review_name=request.form.get("review_name"),
+            review=request.form.get("review"),
+            review_date=request.form.get("review_date"),
+            game_id=request.form.get("game_id")
         )
-        my_database.session.add(game)
+        my_database.session.add(review)
         my_database.session.commit()
-        return redirect(url_for("games"))
-    return render_template("add_game.html", page_title="Add Game")
+        return redirect(url_for("reviews"))
+    return render_template("add_review.html", games=games, page_title="Add Review")
 
 
 
