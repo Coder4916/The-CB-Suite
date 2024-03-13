@@ -4,6 +4,8 @@
 
 <h3>{{ page_title }}</h3>
 
+
+<!-- Add Game
 <div class="row">
     <div class="col">
         <a href="{{ url_for('add_game') }}" class="btn btn-large btn-primary">
@@ -11,6 +13,9 @@
         </a>
     </div>
 </div>
+-->
+
+
 <!-- Bootstrap 5.3 Carousel -->
 <div id="mycarousel" class="carousel slide">
     <div class="carousel-inner">
@@ -23,7 +28,6 @@
                     <p class="card-text">Developer: {{ game.game_developer }}</p>
                     <p class="card-text">Genre: {{ game.game_genre }}</p>
                     <p class="card-text">Release Date: {{ game.game_release_date }}</p>
-                    
                     <button type="button" href="{{ url_for('edit_game', game_id=game.id) }}"
                         class="btn btn-warning">Edit</button>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
@@ -53,12 +57,12 @@
         </div>
         {% endfor %}
     </div>
-    <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselExample"
+    <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#mycarousel"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselExample"
+    <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#mycarousel"
         data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
