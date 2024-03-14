@@ -14,7 +14,7 @@ def games():
     data = []
     with open("my_suite/data/images.json", "r") as json_data:
         data = json.load(json_data)
-    games = list(Game.query.order_by(Game.game_name).all())
+    games = list(Game.query.order_by(Game.name).all())
     return render_template("games.html", page_title="Games", games=games, images=data)
 
 
@@ -22,11 +22,12 @@ def games():
 def add_game():
     if request.method == "POST":
         game = Game(
-            name=request.form.get("game_name"),
-            genre=request.form.get("game_genre"),
-            developer=request.form.get("game_developer"),
-            release_date=request.form.get("game_release_date"),
-            image=request.form.get("game_image")
+            name=request.form.get("name"),
+            genre=request.form.get("genre"),
+            platform=request.form.get("platform"),
+            developer=request.form.get("developer"),
+            release_date=request.form.get("release_date"),
+            image=request.form.get("image")
         )
         my_database.session.add(game)
         my_database.session.commit()
@@ -39,7 +40,7 @@ def add_game():
 def edit_game(game_id):
     game = Game.query.get_or_404(game_id)
     if request.method == "POST":
-        game.game_name = request.form.get("game_name")
+        game.name = request.form.get("game_name")
         my_database.session.commit()
         return redirect(url_for('games'))
     return render_template("edit_game.html", page_title="Edit game", game=game)
@@ -61,7 +62,7 @@ def reviews():
 #Query review name = Have you used this name before? Add to function
 @my_app.route("/add_review", methods=["GET", "POST"])
 def add_review():
-    games = list(Game.query.order_by(Game.game_name).all())
+    games = list(Game.query.order_by(Game.name).all())
     if request.method == "POST":
         review = Review(
             review_name=request.form.get("review_name"),
