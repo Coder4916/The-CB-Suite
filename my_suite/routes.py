@@ -22,10 +22,11 @@ def games():
 def add_game():
     if request.method == "POST":
         game = Game(
-            game_name=request.form.get("game_name"),
-            game_genre=request.form.get("game_genre"),
-            game_developer=request.form.get("game_developer"),
-            game_release_date=request.form.get("game_release_date")
+            name=request.form.get("game_name"),
+            genre=request.form.get("game_genre"),
+            developer=request.form.get("game_developer"),
+            release_date=request.form.get("game_release_date"),
+            image=request.form.get("game_image")
         )
         my_database.session.add(game)
         my_database.session.commit()
@@ -33,6 +34,7 @@ def add_game():
     return render_template("add_game.html", page_title="Add Game")
     
 
+#Query game name = Have you used this name before? Add to function
 @my_app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
 def edit_game(game_id):
     game = Game.query.get_or_404(game_id)
@@ -56,6 +58,7 @@ def reviews():
     return render_template("reviews.html", page_title="Reviews")
 
 
+#Query review name = Have you used this name before? Add to function
 @my_app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     games = list(Game.query.order_by(Game.game_name).all())
