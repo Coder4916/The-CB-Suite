@@ -11,11 +11,8 @@ def home():
 
 @my_app.route("/games")
 def games():
-    data = []
-    with open("my_suite/data/images.json", "r") as json_data:
-        data = json.load(json_data)
     games = list(Game.query.order_by(Game.name).all())
-    return render_template("games.html", page_title="Games", games=games, images=data)
+    return render_template("games.html", page_title="Games", games=games)
 
 
 @my_app.route("/add_game", methods=["GET", "POST"])
@@ -40,9 +37,14 @@ def add_game():
 def edit_game(game_id):
     game = Game.query.get_or_404(game_id)
     if request.method == "POST":
-        game.name = request.form.get("game_name")
+        game.name = request.form.get("name"),
+        game.genre = request.form.get("genre"),
+        game.platform = request.form.get("platform"),
+        game.developer = request.form.get("developer"),
+        game.release_date = request.form.get("release_date"),
+        game.image = request.form.get("image")
         my_database.session.commit()
-        return redirect(url_for('games'))
+        return redirect(url_for("games"))
     return render_template("edit_game.html", page_title="Edit game", game=game)
 
 
