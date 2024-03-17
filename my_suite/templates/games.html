@@ -16,11 +16,10 @@
 
 <!-- Game card -->
 
-
-{% for game in games %}
-<div id="row">
-    <div class="col">
-        <div class="card container-fluid" style="width: 18rem;">
+<div id="row g-0">
+    {% for game in games %}
+    <div class="col-sm-12 col-md-5 col-lg-3 g-0 d-inline-block container-fluid">
+        <div class="card text-center">
             <img src="{{ game.image }}">
             <div class="card-body">
                 <h5 class="card-title">#{{ loop.index }}.{{ game.name }}</h5>
@@ -56,9 +55,7 @@
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-
-{% endfor %}
-
 
 {% endblock %}
