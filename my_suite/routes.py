@@ -58,7 +58,8 @@ def delete_game(game_id):
 
 @my_app.route("/reviews")
 def reviews():
-    return render_template("reviews.html", page_title="Reviews")
+    reviews = list(Review.query.order_by(Review.id).all())
+    return render_template("reviews.html", reviews=reviews, page_title="Reviews")
 
 
 #Query review name = Have you used this name before? Add to function

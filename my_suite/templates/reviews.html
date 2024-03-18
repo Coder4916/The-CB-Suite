@@ -11,4 +11,22 @@
     </div>
 </div>
 
+<div class="accordion" id="myaccordion">
+    {% for review in reviews %}
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <span><strong>Username: </strong>{{ review.username }}<strong> Date: </strong>{{ review.date }}</span>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myaccordion">
+        <div class="accordion-body">
+          <strong>{{ review.game }}</strong>
+          <p>{{ review.review }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
 {% endblock %}
