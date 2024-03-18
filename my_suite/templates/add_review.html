@@ -3,37 +3,55 @@
 
 <h3>{{ page_title }}</h3>
 
-<div class="row card">
-    <form class="col-sm-12" method="POST" action="{{ url_for('add_review') }}">
+<div class="row card container-fluid mx-auto" style="width:75%">
+    <form class="col" method="POST" action="{{ url_for('add_review') }}">
         <!-- Username -->
         <div class="row">
             <div class="input col-sm-12">
-                <i class="fas fa-folder-open prefix"></i>
-                <label for="review_name">Review Name</label>
-                <input id="review_name" name="review_name" type="text" minlength="5" maxlength="50" class="validate" required>
+                <i class="fa-solid fa-user prefix"></i>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" minlength="5" maxlength="50" class="validate form-control" required>
+            </div>
+        </div>
+        <!-- Game id -->
+        <div class="row">
+            <div class="input col-sm-12">
+                <i class="fa-solid fa-gamepad prefix"></i>
+                <label for="game_id">Game</label>
+                <select id="game_id" name="game_id" class="validate form-control" required>
+                <option value="" disabled selected>Choose Game</option>
+                {% for game in games %}
+                    <option value="{{ game.id }}">{{ game.name }}</option>
+                {% endfor %}
+            </select>
+            </div>
+        </div>
         <!-- Review -->
         <div class="row">
             <div class="col-sm-12">
+                <i class="fa-solid fa-pen-to-square prefix"></i>
                 <label for="review">Review</label>
-                <textarea id="review" name="review" type="text" minlength="5" maxlength="300" class="validate" required>
+                <textarea id="review" name="review" type="text" minlength="5" maxlength="300" class="validate form-control" required>
                 </textarea>
             </div>
         </div>
-        <!-- Review date -->
+        <!-- Date -->
         <div class="row">
             <div class="col-sm-12">
-                <label for="Review_date">Review_date</label>
-                <input id="Review_date" name="Review_date" type="text" minlength="5" maxlength="50" class="date validate" required>
+                <i class="fa-regular fa-calendar-days prefix"></i>
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" minlength="5" maxlength="50" class="validate form-control" required>
             </div>
         </div>
         <!-- submit button -->
         <div class="row">
             <div class="col-sm-12 text-center">
                 <button type="submit" class="btn btn-large btn-primary">
-                    Add Review
+                    Submit Review
                 </button>
             </div>
         </div>
+
     </form>
 </div>
 

@@ -67,9 +67,9 @@ def add_review():
     games = list(Game.query.order_by(Game.name).all())
     if request.method == "POST":
         review = Review(
-            review_name=request.form.get("review_name"),
+            username=request.form.get("username"),
             review=request.form.get("review"),
-            review_date=request.form.get("review_date"),
+            date=request.form.get("date"),
             game_id=request.form.get("game_id")
         )
         my_database.session.add(review)
