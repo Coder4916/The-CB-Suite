@@ -19,7 +19,7 @@ class Game(my_database.Model):
 class Review(my_database.Model):
     # The Review model
     id = my_database.Column(my_database.Integer, primary_key=True)
-    username = my_database.Column(my_database.String(30), unique=True, nullable=False)
+    username = my_database.Column(my_database.String(30), nullable=False)
     review = my_database.Column(my_database.Text, nullable=False)
     date = my_database.Column(my_database.Date, nullable=False)
     game_id = my_database.Column(my_database.Integer, my_database.ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
