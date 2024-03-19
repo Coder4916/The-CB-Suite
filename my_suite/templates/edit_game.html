@@ -5,27 +5,33 @@
 
 <div class="row card">
     <form class="col" method="POST" action="{{ url_for('edit_game', game_id=game.id) }}">
-        <!-- game name -->
+        <!-- game inputs -->
         <div class="row">
             <div class="input col-sm-6 m-auto">
-                <i class="fas fa-folder-open prefix"></i>
+
                 <label for="name">Name</label>
-                <input id="name" class="form-control" name="name" value="{{ game.name }}" type="text" minlength="3" maxlength="50" class="validate" required>
-                
+                <input id="name" class="form-control" name="name" value="{{ game.name }}" type="text" minlength="3"
+                    maxlength="50" class="validate" required>
+
                 <label for="genre">Genre</label>
-                <input id="genre" class="form-control" name="genre" value="{{ game.genre }}" type="text" minlength="3" maxlength="50" class="validate" required>
+                <input id="genre" class="form-control" name="genre" value="{{ game.genre }}" type="text" minlength="3"
+                    maxlength="50" class="validate" required>
 
                 <label for="platform">Platform</label>
-                <input id="platform" class="form-control" name="platform" value="{{ game.platform }}" type="text" minlength="3" maxlength="100" class="validate" required>
-                
+                <input id="platform" class="form-control" name="platform" value="{{ game.platform }}" type="text"
+                    minlength="3" maxlength="100" class="validate" required>
+
                 <label for="developer">Developer</label>
-                <input id="developer" class="form-control" name="developer" value="{{ game.developer }}" type="text" minlength="3" maxlength="50" class="validate" required>
-                
+                <input id="developer" class="form-control" name="developer" value="{{ game.developer }}" type="text"
+                    minlength="3" maxlength="50" class="validate" required>
+
                 <label for="release_date">Release Date</label>
-                <input id="release_date" class="form-control" name="release_date" value="{{ game.release_date }}" type="text" minlength="3" maxlength="50" class="validate" required>
+                <input id="release_date" class="form-control" name="release_date" value="{{ game.release_date }}"
+                    type="text" minlength="3" maxlength="50" class="validate" required>
 
                 <label for="image">Image</label>
-                <input id="image" class="form-control" name="image" value="{{ game.image }}" type="text" minlength="5" maxlength="150" class="validate" required>
+                <input id="image" class="form-control" name="image" value="{{ game.image }}" type="text" minlength="5"
+                    maxlength="150" class="validate" required>
             </div>
         </div>
         <!-- submit button -->
