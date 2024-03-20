@@ -4,20 +4,20 @@ from my_suite.models import Review, Game
 import json
 
 
-#Function to render home template
+#Function to render home/ blog template
 @my_app.route("/")
 def home():
     return render_template("home.html", page_title="Home")
 
 
-#Function to render games template
+#Function to render games template, getting all games added to the site
 @my_app.route("/games")
 def games():
     games = list(Game.query.order_by(Game.name).all())
     return render_template("games.html", page_title="Games", games=games)
 
 
-#Function to render add_game template
+#Function to render add_game template with a POST method to add game data
 @my_app.route("/add_game", methods=["GET", "POST"])
 def add_game():
     if request.method == "POST":
@@ -37,7 +37,7 @@ def add_game():
 
 #Query game name = Have you used this name before? Add to function
 
-#Function to render edit_game template
+#Function to render edit_game template and gets the selected game to edit
 @my_app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
 def edit_game(game_id):
     game = Game.query.get_or_404(game_id)
@@ -53,7 +53,7 @@ def edit_game(game_id):
     return render_template("edit_game.html", page_title="Edit game", game=game)
 
 
-#Function to render delete_game template
+#Function to delete_game
 @my_app.route("/delete_game/<int:game_id>")
 def delete_game(game_id):
     game = Game.query.get_or_404(game_id)
@@ -62,7 +62,7 @@ def delete_game(game_id):
     return redirect(url_for("games"))
 
 
-#Function to render reviews template
+#Function to render reviews template, getting all reviews added to the site
 @my_app.route("/reviews")
 def reviews():
     reviews = list(Review.query.order_by(Review.id).all())
@@ -71,7 +71,7 @@ def reviews():
 
 #Query review name = Have you used this name before? Add to function
 
-#Function to render add_review template
+#Function to render add_review template and POST review inputs to the site
 @my_app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     games = list(Game.query.order_by(Game.name).all())
@@ -88,7 +88,7 @@ def add_review():
     return render_template("add_review.html", games=games, page_title="Add Review")
 
 
-#Function to render edit_review template
+#Function to render edit_review template, getting all games and the selected review to edit
 @my_app.route("/edit_review/<int:review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     review = Review.query.get_or_404(review_id)
@@ -103,7 +103,13 @@ def edit_review(review_id):
     return render_template("edit_review.html", review=review, games=games, page_title="Edit Review")
 
 
-
+#Function to delete_review 
+@my_app.route("/delete_review/<int:review_id>")
+def delete_review(review_id):
+    review = Review.query.get_or_404(review_id)
+    my_database.session.delete(review)
+    my_database.session.commit()
+    return redirect(url_for("reviews"))
 
 
 
