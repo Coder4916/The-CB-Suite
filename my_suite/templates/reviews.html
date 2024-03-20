@@ -23,6 +23,10 @@
         <div class="accordion-body">
           <strong>{{ review.game }}</strong>
           <p>{{ review.review }}</p>
+          <p>
+            <a type="button" href="{{ url_for('edit_review', review_id=review.id) }}"
+            class="btn btn-warning">Edit</a>
+          </p>
         </div>
       </div>
     </div>

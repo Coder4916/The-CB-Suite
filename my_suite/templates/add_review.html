@@ -19,7 +19,7 @@
                 <i class="fa-solid fa-gamepad prefix"></i>
                 <label for="game_id">Game</label>
                 <select id="game_id" name="game_id" class="validate form-control" required>
-                <option value="" disabled selected>Choose Game</option>
+                <option disabled selected>Choose Game</option>
                 {% for game in games %}
                     <option value="{{ game.id }}">{{ game.name }}</option>
                 {% endfor %}

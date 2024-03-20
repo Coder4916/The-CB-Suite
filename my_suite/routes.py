@@ -89,7 +89,7 @@ def add_review():
 
 
 #Function to render edit_review template
-@my_app.route("/add_review/<int:review_id>", methods=["GET", "POST"])
+@my_app.route("/edit_review/<int:review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     review = Review.query.get_or_404(review_id)
     games = list(Game.query.order_by(Game.name).all())
@@ -99,7 +99,8 @@ def edit_review(review_id):
         review.date=request.form.get("date"),
         review.game_id=request.form.get("game_id")
         my_database.session.commit()
-    return render_template("edit_review.html", review=review, page_title="Edit Review")
+        return redirect(url_for("reviews"))
+    return render_template("edit_review.html", review=review, games=games, page_title="Edit Review")
 
 
 
