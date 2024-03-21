@@ -3,14 +3,6 @@
 
 <h3>{{ page_title }}</h3>
 
-<div class="row">
-  <div class="col text-center">
-    <a href="{{ url_for('add_review') }}" class="btn btn-large btn-primary">
-      Add Review
-    </a>
-  </div>
-</div>
-
 <div class="accordion" id="myaccordion">
   {% for review in reviews %}
   <div class="accordion-item">

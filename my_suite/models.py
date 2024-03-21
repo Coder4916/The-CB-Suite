@@ -21,6 +21,7 @@ class Review(my_database.Model):
     id = my_database.Column(my_database.Integer, primary_key=True)
     username = my_database.Column(my_database.String(30), nullable=False)
     review = my_database.Column(my_database.Text, nullable=False)
+    star_rating = my_database.Column(my_database.String(10), nullable=False)
     date = my_database.Column(my_database.Date, nullable=False)
     game_id = my_database.Column(my_database.Integer, my_database.ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
     

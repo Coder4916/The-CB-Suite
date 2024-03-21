@@ -66,7 +66,7 @@ def delete_game(game_id):
 @my_app.route("/reviews")
 def reviews():
     reviews = list(Review.query.order_by(Review.id).all())
-    return render_template("reviews.html", reviews=reviews, page_title="Reviews")
+    return render_template("reviews.html", reviews=reviews, page_title="Game Reviews")
 
 
 #Query review name = Have you used this name before? Add to function
@@ -79,13 +79,14 @@ def add_review():
         review = Review(
             username=request.form.get("username"),
             review=request.form.get("review"),
+            star_rating=request.form.get("value"),
             date=request.form.get("date"),
             game_id=request.form.get("game_id")
         )
         my_database.session.add(review)
         my_database.session.commit()
         return redirect(url_for("reviews"))
-    return render_template("add_review.html", games=games, page_title="Add Review")
+    return render_template("add_review.html", games=games, ratings=ratings, page_title="Add Review")
 
 
 #Function to render edit_review template, getting all games and the selected review to edit
@@ -96,6 +97,7 @@ def edit_review(review_id):
     if request.method == "POST":
         review.username=request.form.get("username"),
         review.review=request.form.get("review"),
+        review.star_rating=request.form.get("value"),
         review.date=request.form.get("date"),
         review.game_id=request.form.get("game_id")
         my_database.session.commit()

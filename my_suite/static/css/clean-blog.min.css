@@ -426,3 +426,27 @@ footer .copyright {
     font-size: 16px;
     padding: 25px 35px
 }
+
+/* Custom CSS for my_suite */
+
+.star-rating{
+    direction: rtl;
+}
+
+.star-rating label {
+    cursor: pointer;
+}
+
+.star-rating label:hover i,
+.star-rating label:hover ~ label i{
+  color: gold;
+}
+
+.star-rating .rating-radio{
+    display: none;
+}
+
+.star-rating input[type="radio"]:checked + label i,
+.star-rating input[type="radio"]:checked ~ label i{
+    color: gold;
+}
