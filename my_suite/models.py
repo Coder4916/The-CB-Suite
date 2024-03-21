@@ -19,14 +19,14 @@ class Game(my_database.Model):
 class Review(my_database.Model):
     # The Review model
     id = my_database.Column(my_database.Integer, primary_key=True)
-    username = my_database.Column(my_database.String(30), nullable=False)
+    username = my_database.Column(my_database.Text, nullable=False)
     review = my_database.Column(my_database.Text, nullable=False)
-    star_rating = my_database.Column(my_database.String(10), nullable=False)
+    star_rating = my_database.Column(my_database.Text, nullable=False)
     date = my_database.Column(my_database.Date, nullable=False)
     game_id = my_database.Column(my_database.Integer, my_database.ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
     
     def __repr__(self):
         # represents itself
-        return "#{0} Reviewer: {1} | Review: {2} | Date: {3}".format(
-            self.id, self.name, self.review, self.date
+        return "#{0} Username: {1} | Review: {2} | Star Rating: {3} | Date: {4}".format(
+            self.id, self.name, self.review, self.star_rating, self.date
         )
