@@ -97,7 +97,7 @@ def edit_review(review_id):
     if request.method == "POST":
         review.username=request.form.get("username"),
         review.review=request.form.get("review"),
-        review.star_rating=request.form.get("{{ loop.index }} Stars"),
+        review.star_rating=request.form.get("stars"),
         review.date=request.form.get("date"),
         review.game_id=request.form.get("game_id")
         my_database.session.commit()
