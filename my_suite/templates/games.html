@@ -5,23 +5,26 @@
 <h3>{{ page_title }}</h3>
 
 <!-- Game card -->
-<div id="row g-0">
+<div id="row">
     {% for game in games %}
-    <div class="col-sm-12 col-md-5 col-lg-3 g-0 d-inline-block container-fluid">
-        <div class="card text-center">
-            <img src="{{ game.image }}">
-            <div class="card-body">
-                <h5 class="card-title">#{{ loop.index }}.{{ game.name }}</h5>
-                <p class="card-text">Developer: {{ game.developer }}</p>
-                <p class="card-text">Genre: {{ game.genre }}</p>
-                <p class="card-text">Release Date: {{ game.release_date }}</p>
-                <p class="card-text">Platform: {{ game.platform }}</p>
-                <a type="button" href="{{ url_for('add_review') }}" class="btn btn-large btn-primary">Add
-                    Review</a>
-            </div>
+    <div class="col-sm-12 col-md-5 col-lg-3 d-inline-block container-fluid m-0 p-0">
+        <div class="card">
+            <img src="{{ game.image }}" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">#{{ loop.index }}.{{ game.name }}</h5>
+            <p class="card-text">Developer: {{ game.developer }}</p>
+            <p class="card-text">Genre: {{ game.genre }}</p>
+            <p class="card-text">Release Date: {{ game.release_date }}</p>
+            <p class="card-text">Platform: {{ game.platform }}</p>
+            <a type="button" href="{{ url_for('add_review') }}" class="btn btn-large btn-primary">Add
+                Review</a>
+          </div>
         </div>
     </div>
     {% endfor %}
 </div>
 
+    <div class="col-sm-12 col-md-4 col-lg-2 g-0 d-inline-block container-fluid">
+            
+    </div>
 {% endblock %}

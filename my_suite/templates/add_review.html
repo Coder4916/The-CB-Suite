@@ -1,81 +1,87 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>{{ page_title }}</h3>
-
-<div class="row card container-fluid mx-auto" style="width:75%">
-    <form class="col" method="POST" action="{{ url_for('add_review') }}">
-        <!-- Review username input -->
-        <div class="row">
-            <div class="input col-sm-12">
-                <i class="fa-solid fa-user prefix"></i>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" minlength="5" maxlength="50"
-                    class="validate form-control" required>
+<div class="row card container-fluid mx-auto" style="width:66%">
+    <fieldset>
+        <legend>{{ page_title }}</legend>
+        <form class="col form-card pt-3" method="POST" action="{{ url_for('add_review') }}">
+            
+            <!-- Review username input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                <div class="form-floating">
+                    <input type="text" name="username" class="form-control validate" id="username">
+                    <label for="username">Username</label>
+                </div>
             </div>
-        </div>
-        <!-- Game id input -->
-        <div class="row">
-            <div class="input col-sm-12">
-                <i class="fa-solid fa-gamepad prefix"></i>
-                <label for="game_id">Game</label>
-                <select id="game_id" name="game_id" class="validate form-control" required>
-                    <option disabled selected>Choose Game</option>
-                    {% for game in games %}
-                    <option value="{{ game.id }}">{{ game.name }}</option>
-                    {% endfor %}
-                </select>
+            <!-- Game id input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-gamepad"></i></span>
+                <div class="form-floating">
+                    <select id="game_id" name="game_id" class="validate form-control" required>
+                        <option disabled selected></option>
+                        {% for game in games %}
+                        <option value="{{ game.id }}">{{ game.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="game_id">Choose Game</label>
+                </div>
             </div>
-        </div>
-        <!-- Review input -->
-        <div class="row">
-            <div class="col-sm-12">
-                <i class="fa-solid fa-pen-to-square prefix"></i>
-                <label for="review">Review</label>
-                <textarea id="review" name="review" type="text" minlength="5" maxlength="300"
-                    class="validate form-control" required>
-                </textarea>
+            <!-- Review input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-pen-to-square prefix"></i></span>
+                <div class="form-floating">
+                    <textarea id="review" name="review" type="text" class="validate form-control" required></textarea>
+                    <label for="review"> Review</label>
+                </div>
             </div>
-        </div>
-        <!-- Star rating -->
-        <div class="row">
-            <div class="col-sm-12 star-rating">
-                <input id="star-1" name="stars" type="radio" class="validate rating-radio" value="5/5 Stars!" required>
-                </input>
-                <label for="star-1"><i class="fa-solid fa-star"></i></label>
-                <input id="star-2" name="stars" type="radio" class="validate rating-radio" value="4/5 Stars" required>
-                </input>
-                <label for="star-2"><i class="fa-solid fa-star"></i></label>
-                <input id="star-3" name="stars" type="radio" class="validate rating-radio" value="3/5 Stars" required>
-                </input>
-                <label for="star-3"><i class="fa-solid fa-star"></i></label>
-                <input id="star-4" name="stars" type="radio" class="validate rating-radio" value="2/5 Stars" required>
-                </input>
-                <label for="star-4"><i class="fa-solid fa-star"></i></label>
-                <input id="star-5" name="stars" type="radio" class="validate rating-radio" value="1/5 Stars" required>
-                </input>
-                <label for="star-5"><i class="fa-solid fa-star"></i></label>
+            <!-- Date input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-regular fa-calendar-days prefix"></i></span>
+                <div class="form-floating">
+                    <input id="date" name="date" type="date" class="validate form-control" required></input>
+                    <label for="date">Date</label>
+                </div>
             </div>
-        </div>
-        <!-- Date input -->
-        <div class="row">
-            <div class="col-sm-12">
-                <i class="fa-regular fa-calendar-days prefix"></i>
-                <label for="date">Date</label>
-                <input id="date" name="date" type="date" minlength="5" maxlength="50" class="validate form-control"
-                    required>
+            <!-- Star rating -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-regular fa-star"></i></span>
+                <div class="form-floating">
+                    <div class="col-sm-12 star-rating">
+                        <input id="star-1" name="stars" type="radio" class="validate rating-radio" value="5/5 Stars!"
+                            required>
+                        </input>
+                        <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                        <input id="star-2" name="stars" type="radio" class="validate rating-radio" value="4/5 Stars"
+                            required>
+                        </input>
+                        <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                        <input id="star-3" name="stars" type="radio" class="validate rating-radio" value="3/5 Stars"
+                            required>
+                        </input>
+                        <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                        <input id="star-4" name="stars" type="radio" class="validate rating-radio" value="2/5 Stars"
+                            required>
+                        </input>
+                        <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                        <input id="star-5" name="stars" type="radio" class="validate rating-radio" value="1/5 Stars"
+                            required>
+                        </input>
+                        <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Review submit button -->
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <button type="submit" class="btn btn-large btn-primary">
-                    Submit Review
-                </button>
+            <!-- Review submit button -->
+            <div class="row">
+                <div class="col-sm-12 text-center p-3">
+                    <button type="submit" class="btn btn-large btn-primary">
+                        Submit Review
+                    </button>
+                </div>
             </div>
-        </div>
-
-    </form>
+        </form>
+    </fieldset>
+    
 </div>
 
 {% endblock %}

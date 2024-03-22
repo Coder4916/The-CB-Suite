@@ -432,7 +432,9 @@ footer .copyright {
 .star-rating{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: left;
+    font-size: larger;
+    padding: 1%;
 }
 
 .star-rating label {
