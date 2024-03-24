@@ -35,11 +35,20 @@
         <div class="input-group">
             <span class="input-group-text"><i class="fa-solid fa-pen-to-square prefix"></i></span>
             <div class="form-floating">
-                <textarea id="review" name="review" type="text" minlength="5" maxlength="300"
+                <textarea id="review" name="review" type="text"
                     class="validate form-control" required>
-                    {{- review.review -}}
+                    {{review.review}}
                 </textarea>
                 <label for="review"> Review</label>
+            </div>
+        </div>
+        <!-- Edit date -->
+        <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-calendar-days prefix"></i></span>
+            <div class="form-floating">
+                <input id="date" name="date" value="{{ review.date }}" type="date" class="validate form-control"
+                    required></input>
+                <label for="date">Date</label>
             </div>
         </div>
         <!-- Star rating -->
@@ -68,15 +77,6 @@
                     </input>
                     <label for="star-5"><i class="fa-solid fa-star"></i></label>
                 </div>
-            </div>
-        </div>
-        <!-- Edit date -->
-        <div class="input-group">
-            <span class="input-group-text"><i class="fa-regular fa-calendar-days prefix"></i></span>
-            <div class="form-floating">
-                <input id="date" name="date" value="{{ review.date }}" type="date" class="validate form-control"
-                    required></input>
-                <label for="date">Date</label>
             </div>
         </div>
         <!-- Submit button -->

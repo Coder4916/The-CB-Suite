@@ -119,7 +119,7 @@ The target audience for this website is primarily gamers and game critics, howev
 
 Specifically:
 
-- People who require information on the latest games on the market.
+- People who might be looking for information on the latest games on the market.
 - Anyone interested in gaming.
 - Anybody looking to make a game purchase and may need guidance.
 - The site can also provide a platform for game critics to indirectly communicate with game developers.
@@ -146,27 +146,29 @@ Based on the research, goals, and the considerations above, I considered what sh
 |  A. Games page             |      5     |     5     |
 |  B. Reviews page           |      5     |     5     |
 |  C. Add review page        |      5     |     5     |
-|  D. Username function      |      4     |     5     |
-|  E. Blog page              |      3     |     4     |
-|  E. Social Media links     |      3     |     5     |
+|  D. Edit review page       |      5     |     5     |
+|  E. Delete review function |      5     |     5     |
+|  F. Username function      |      4     |     3     |
+|  G. Blog page              |      3     |     3     |
+|  H. Social Media links     |      2     |     3     |
 
-
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
 
 ### 2. **Scope Plane**
 
 Based on the mapping in Strategy Plane, I decided to include these contents below in the website:
 
-- Games page; introduces the user to the site, and will display the games in a carousel.
-- Reviews page; will display the completed reviews to the user, and will also include an edit and delete review function.
-- Add review page; accessed via the game page, and will give the user the ability to create and read reviews based on any game on the site.
-- Username function; will give a level of security to the site. This will prevent tampering of other reviews, as well as protecting personal reviews.
-- Blog page; will add to the site's usability, providing further gaming info etc.
+- Games page; displays several games in the current gaming market, allowing a user to leave a review for each.
+- Reviews page; will display any reviews to the user, and will also include an edit and delete review function.
+- Add review page; accessed via game cards on the games page, and will give the user the ability to create and read reviews based on any game on the site.
+- Edit review page; accessible once a review has been created on the site.
+- Username function; will give a level of security to the site. This will prevent editing/deleting of other reviews, as well as protecting personal reviews.
+- Blog page; will add to the site's usability and appeal, providing further gaming info etc.
 - Social media links; gives the user the ability to contact the owner of the site, and gain further info on the site itself, such as any future updates etc.
 
 ### 3. **Structure Plane**
 
-The website's front-end will have a simple structure with a user friendly navigation element to reach each html page. Each page will also utilise template inheritance, sharing a consistant template utilising the web framework Flask. The content specific to each page/child template will be controlled using Flask specific block tags. Layout on child templates will also be controlled using Flask for loop tags.
+The website's front-end will consist of a simple structure with a user friendly navigation element to reach each html page. Each page will also share a consistant base template utilising the web framework Flask. The content specific to each page/child template will be controlled using Flask specific extend/block content tags. Layout on child templates will also be controlled using Flask loop tags. A POSTGRES Database will contain game and review content, which the site will also display via Flask template loops.
 
 [Back to top](#the-cb-suite)
 
@@ -174,21 +176,25 @@ The website's front-end will have a simple structure with a user friendly naviga
 
 The initial layout and interface of the Website was created using Balsamiq Wireframes. The design/layout and feel of the site was created with UI in mind, which allows immediate interaction in first-time use, and meets the needs of the intended audience.
 
-![Balsamiq-wireframes]()
+![Balsamiq-wireframes Blog/Home page](/my_suite/static/img/balsamiq-blog.png)
+
+![Balsamiq-wireframes](/my_suite/static/img/balsamiq-game.png)
+
+![Balsamiq-wireframes](/my_suite/static/img/balsamiq-review.png)
 
 ### 5. **Surface Plane**
 
 #### **Color Scheme**
 
-The colors used are primarily derived from the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
+The aesthetics used are primarily derived from the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
 
 #### **Typography**
 
-The fonts I used for the website were sourced from [Start Bootstrap]().
+The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/), [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text and Lora, Times New Roman and serif for body text.
 
 #### **Imagery**
 
-I have utilised a mix of free to use images sourced online, and the Coach's personal pictures of local green space/blue space etc. I have used a fallback color if the main body image doesn't load.
+I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer gadets on a table](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) for the main image. A fallback color is included in the [Start Bootstrap](https://startbootstrap.com/) package, which will be added to the body if the main image doesn't load.
 
 [Back to top](#think-in-space)
 
@@ -198,43 +204,27 @@ I have utilised a mix of free to use images sourced online, and the Coach's pers
 
 #### 1. **Header**
 
-- The header consists of a website logo which sits on the left hand side of the page, navigation bar and title. The nav-bar includes three nav-links on the right hand side that link to each site page. The header occupies 100% width of the site.
+- The header will consist of a [main image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/), title and navigation bar. The nav-bar will include three nav-links on the right hand side that link to each site page. The header will occupy 100% width of the site.
 
-- The navigation bar is fully responsive on all device sizes. On desktop view, the user can see all nav-links, while on a smaller device, these collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
+- The navigation bar will be fully responsive on all device sizes. On desktop view, the user will be able to see all nav-links, while on a smaller device, these will collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
 
-- The main logo is not displayed on a small device to create more space for content and features. This is done using a CSS Media Query.
+- The Nav-links will have a subtle hover state when the user hovers over each link, and include a [Bootstrap](https://getbootstrap.com/docs/5.3/components/list-group/#active-items) .active class to show which page the user is on.
 
-- The Nav-links have a subtle hover state when the user hovers over each link, and includes a [Bootstrap](https://getbootstrap.com/docs/5.3/components/list-group/#active-items) .active class to show which page the user is on.
+#### 2. **Home Page**
 
-#### 2. **About me page**
+- The Home Page will include a title and sub-title to introduce the user, and a blog element to complement the site's game theme. The template will be taken from a base.html file within the CB-Suite package, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
 
-- The About me page includes three sections which give a brief introduction of the Coach;
+#### 3. **Games Page**
 
-- The Coach, Background and Tried and Tested sections include information about the Coach's life experience and qualifications, as well as how the Coach has already helped others.
+- The Games Page will contain all games that the user will have the option to review, each will be set within a [Bootstrap card](https://getbootstrap.com/docs/5.3/components/card/#about) housed within a [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works). Information about each game will be stored in a POSTGRES Database and displayed using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will taken from a base.html file within the project file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
 
-#### 3. **Coaching Page**
+#### 4. **Reviews Page**
 
-- The Coaching Page includes three sections which inform the user about Life Coaching;
-
-- The Why Life Coaching, What to Expect, and Testimonials sections include information and reviews based on what would normally be involved if a user decides to book a coaching session, and help them decide whether this coaching/journey is right for them.
-
-- A Bootstrap Carousel has been added to display testimonials/reviews and is fully responsive on all devices.
-
-#### 4. **Contact Page**
-
-- The Contact Page is divided into three sections, which allows the user to contact the Coach or book a session;
-
-- The Get in Touch and FAQs sections contain a contact form, map and answers to frequently asked questions to assist the user.
-
-- All sections are 75% width of the screen size and fully responsive on different sized devices.
+The Reviews Page will display any reviews added to the site by a user. Reviews will be stored in a table in a POSTGRES database, my_suite, and displayed to the page using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will also be taken from a base.html file within the CB-Suite file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
 
 #### 5. **Footer**
 
-The Footer uses the same color as the Navigational Menu and provides social media links that all open in new tabs. The Footer also contains the site logo which takes the user back to the About Me Page.
-
-#### 6. **Learn more Page**
-
-A Learn More link was added to the Footer, which gives the user access to a list of educational links to external sites. This give the user the opportunity to find out more about Life Coaching and associated subjects.
+The Footer will provide any social media links that all open in new tabs. The Footer will also contain a copyright image with creation date using [Javascript](https://www.w3schools.com/jsref/jsref_getfullyear.asp) which will automatically update accordingly.
 
 ### **Features to be added in the future**
 
