@@ -188,7 +188,7 @@ The aesthetics used are primarily derived from the [Clean Blog](https://startboo
 
 #### **Typography**
 
-The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/), [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text and Lora, Times New Roman and serif for body text.
+The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/), [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
 
 #### **Imagery**
 
@@ -248,7 +248,7 @@ These features will be added where possible during further development phases:
 
 [CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website. Again, most of the CSS was included in the [Start Bootstrap](https://startbootstrap.com/) theme.
 
-[Python](https://www.python.org/) was used to create the back-end database and declare tables used to store game/review data using python models. Flask was used to extend the base.html page template, and Routing was used to render each page based on route functions.
+[Python](https://www.python.org/) was used to create the back-end Relational Database, declaring tables used to store game/review data using [SQLAlchemy](https://www.sqlalchemy.org/) python models. [Flask](https://flask.palletsprojects.com/en/3.0.x/) was used to inject page content into the the base.html template, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) was used to render each page based on route functions.
 
 ### **Additional Languages Used**
 
@@ -256,27 +256,29 @@ These features will be added where possible during further development phases:
 
 ### **Frameworks, Libraries and Programs Used**
 
-1. [Bootstrap 5.3](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website, as well as adding components.
+1. [Start Bootstrap](https://startbootstrap.com/) provided the [Clean Blog](https://startbootstrap.com/theme/clean-blog) template for each site page.
 
-2. [Google Fonts](https://fonts.google.com/) was used to import the “Roboto” and “Lexend” fonts into the html file, and were used on all parts of the site.
+2. [Bootstrap 5.3](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website, as well as adding components, such as a [card](https://getbootstrap.com/docs/5.3/components/card/) for each game, and [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works) for reviews.
 
-3. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
+3. [SQLAlchemy](https://www.sqlalchemy.org/) was utilised to create each table that made up the site's back-end database.
 
-4. [Codeanywhere](https://app.codeanywhere.com/) IDE was used for creating the website and using the built in terminal to push the site to GitHub.
+4. [Google Fonts](https://fonts.google.com/) provided Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif fonts for the header and titles and Lora, Times New Roman and serif fonts for the body of the site.
 
-5. [GitHub](https://github.com/) was used to store the project's code after being pushed from Codeanywhere.
+5. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
 
-6. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the general layout and feel of the website and the high fidelity mock up during the design process.
+6. [Gitpod](https://gitpod.io/workspaces) IDE was used for creating the website and back end database, and using the built in terminal to push the site to GitHub for version control.
 
-7. [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add vendor prefixes to the CSS rules, to ensure that they work across all browsers.
+7. [GitHub](https://github.com/) was used to store the project's code after being pushed from [Gitpod](https://gitpod.io/workspaces).
 
-8. [Am I Responsive](https://ui.dev/amiresponsive?url=https://8002-coder4916-ci-milestone-ylxy4w9e48.us2.codeanyapp.com/index.html) was used to preview the website across a variety of popular devices.
+8. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the initial general layout and feel of the website and the high fidelity mock up during the design process.
 
-9. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
+9. [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add vendor prefixes to the CSS rules, to ensure that they work across all browsers.
 
-10. [Coolors](https://coolors.co/) was used to create a cohesive color scheme for the website.
+10. [Am I Responsive](https://ui.dev/amiresponsive?url=https://8002-coder4916-ci-milestone-ylxy4w9e48.us2.codeanyapp.com/index.html) was used to preview the website across a variety of popular devices.
 
-[Back to top](#think-in-space)
+11. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
+
+[Back to top](#the-cb-suite)
 
 ## **Issues and Bugs**
 

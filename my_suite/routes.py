@@ -1,7 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from my_suite import my_app, my_database
 from my_suite.models import Review, Game
-import json
 
 
 #Function to render home/ blog template
