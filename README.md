@@ -152,8 +152,6 @@ Based on the research, goals, and the considerations above, I considered what sh
 |  G. Blog page              |      3     |     3     |
 |  H. Social Media links     |      2     |     3     |
 
-[Back to top](#the-cb-suite)
-
 ### 2. **Scope Plane**
 
 Based on the mapping in Strategy Plane, I decided to include these contents below in the website:
@@ -196,7 +194,7 @@ The fonts I used for the website were all included within the [Start Bootstrap](
 
 I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer gadets on a table](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) for the main image. A fallback color is included in the [Start Bootstrap](https://startbootstrap.com/) package, which will be added to the body if the main image doesn't load.
 
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
 
 ## **Features**
 
@@ -204,19 +202,19 @@ I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer g
 
 #### 1. **Header**
 
-- The header will consist of a [main image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/), title and navigation bar. The nav-bar will include three nav-links on the right hand side that link to each site page. The header will occupy 100% width of the site.
+- The header consists of a [main image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/), title and navigation bar. The nav-bar includes three nav-links on the right hand side that link to each site page. The header occupies 100% width of the site.
 
-- The navigation bar will be fully responsive on all device sizes. On desktop view, the user will be able to see all nav-links, while on a smaller device, these will collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
+- The navigation bar is fully responsive on all device sizes. On desktop view, the user will be able to see all nav-links, while on a smaller device, these collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
 
-- The Nav-links will have a subtle hover state when the user hovers over each link, and include a [Bootstrap](https://getbootstrap.com/docs/5.3/components/list-group/#active-items) .active class to show which page the user is on.
+- The Nav-links have a subtle hover state when the user hovers over each link, and include a [Bootstrap](https://getbootstrap.com/docs/5.3/components/list-group/#active-items) .active class to show which page the user is on.
 
 #### 2. **Home Page**
 
-- The Home Page will include a title and sub-title to introduce the user, and a blog element to complement the site's game theme. The template will be taken from a base.html file within the CB-Suite package, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
+- The Home Page includes a title and sub-title to introduce the user, and a blog element to complement the site's game theme. The template is taken from a base.html file within the CB-Suite project package, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the each site page in the browser.
 
 #### 3. **Games Page**
 
-- The Games Page will contain all games that the user will have the option to review, each will be set within a [Bootstrap card](https://getbootstrap.com/docs/5.3/components/card/#about) housed within a [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works). Information about each game will be stored in a POSTGRES Database and displayed using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will taken from a base.html file within the project file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
+- The Games Page contains all games that the user will have the option to review, each set within a [Bootstrap card](https://getbootstrap.com/docs/5.3/components/card/#about) and housed within a [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works). Information about each game is stored in a POSTGRES Database and displayed using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will taken from a base.html file within the project file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the page in the browser.
 
 #### 4. **Reviews Page**
 
@@ -224,33 +222,37 @@ The Reviews Page will display any reviews added to the site by a user. Reviews w
 
 #### 5. **Footer**
 
-The Footer will provide any social media links that all open in new tabs. The Footer will also contain a copyright image with creation date using [Javascript](https://www.w3schools.com/jsref/jsref_getfullyear.asp) which will automatically update accordingly.
+The Footer provides social media links that all open in new tabs. The Footer also contains a copyright image with creation date using [Javascript](https://www.w3schools.com/jsref/jsref_getfullyear.asp) which will automatically update accordingly.
 
 ### **Features to be added in the future**
 
 These features will be added where possible during further development phases:
 
-- A time/date picker to book available coaching sessions automatically. This is likely to be created/added to the site once Elwyn can establish set operating times for his business in the future.
-  
-- A Legitimate form url address where the user's details can be stored and utilised by the Coach.
+- Adding CRUD function to the blog element, where users can leave their own content on the page for others to digest/share.
 
-- An option to have the website translated to Welsh if the user prefers.
+- Increasing the number of games on the site, allowing users to add their own too.
 
-- More FAQs and Reviews as the business progresses.
+- A search feature to divide the games into groups/classes using their card info i.e. genre etc, if somebody was interested in something in particular.
 
-[Back to top](#think-in-space)
+- As the site grows, a generic search engine within the games/review pages navbar would be helpful to increase accessibilty.
+
+- A function to take the average of the total number of star ratings and output an overall game review score, which could be added to the game cards.
+
+[Back to top](#the-cb-suite)
 
 ## **Technologies Used**
 
 ### **Main Languages used**
 
-[HTML5](https://en.wikipedia.org/wiki/HTML5) was used to create the front end framework of the website.
+[HTML5](https://en.wikipedia.org/wiki/HTML5) was used to create the front end base template of the website. A [Start Bootstrap](https://startbootstrap.com/) theme was used.
 
-[CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website, including using effective typography and complimentary colors that would improve UX.
+[CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website. Again, most of the CSS was included in the [Start Bootstrap](https://startbootstrap.com/) theme.
+
+[Python](https://www.python.org/) was used to create the back-end database and declare tables used to store game/review data using python models. Flask was used to extend the base.html page template, and Routing was used to render each page based on route functions.
 
 ### **Additional Languages Used**
 
-[Javascript](https://en.wikipedia.org/wiki/JavaScript) was used to implement functions that allowed the Hamburger menu in Navbar, and a carousel to display several testimonials. Both were applied for a better UX.
+[Javascript](https://en.wikipedia.org/wiki/JavaScript) controls the function of the navigation bar, and scripts are added to control [date output](https://www.w3schools.com/jsref/jsref_getfullyear.asp) in the footer of each page
 
 ### **Frameworks, Libraries and Programs Used**
 
