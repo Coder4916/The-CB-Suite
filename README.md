@@ -260,68 +260,67 @@ These features will be added where possible during further development phases:
 
 2. [Bootstrap 5.3](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website, as well as adding components, such as a [card](https://getbootstrap.com/docs/5.3/components/card/) for each game, and [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works) for reviews.
 
-3. [SQLAlchemy](https://www.sqlalchemy.org/) was utilised to create each table that made up the site's back-end database.
+3. [Flask]
 
-4. [Google Fonts](https://fonts.google.com/) provided Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif fonts for the header and titles and Lora, Times New Roman and serif fonts for the body of the site.
+4. [SQLAlchemy](https://www.sqlalchemy.org/) was utilised to create each table that made up the site's back-end database.
 
-5. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
+5. [Google Fonts](https://fonts.google.com/) provided Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif fonts for the header and titles and Lora, Times New Roman and serif fonts for the body of the site.
 
-6. [Gitpod](https://gitpod.io/workspaces) IDE was used for creating the website and back end database, and using the built in terminal to push the site to GitHub for version control.
+6. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
 
-7. [GitHub](https://github.com/) was used to store the project's code after being pushed from [Gitpod](https://gitpod.io/workspaces).
+7. [Gitpod](https://gitpod.io/workspaces) IDE was used for creating the website and back end database, and using the built in terminal to push the site to GitHub for version control.
 
-8. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the initial general layout and feel of the website and the high fidelity mock up during the design process.
+8. [GitHub](https://github.com/) was used to store the project's code after being pushed from [Gitpod](https://gitpod.io/workspaces).
 
-9. [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add vendor prefixes to the CSS rules, to ensure that they work across all browsers.
+9. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the initial general layout and feel of the website and the high fidelity mock up during the design process.
 
-10. [Am I Responsive](https://ui.dev/amiresponsive?url=https://8002-coder4916-ci-milestone-ylxy4w9e48.us2.codeanyapp.com/index.html) was used to preview the website across a variety of popular devices.
+10. [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add vendor prefixes to the CSS rules, to ensure that they work across all browsers.
 
-11. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
+11. [Am I Responsive](https://ui.dev/amiresponsive?url=https://8002-coder4916-ci-milestone-ylxy4w9e48.us2.codeanyapp.com/index.html) was used to preview the website across a variety of popular devices.
+
+12. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
 
 [Back to top](#the-cb-suite)
 
 ## **Issues and Bugs**
 
-- Issue: Bootstrap navbar toggler would not collapse correctly, once expanded on a small device.
+- Issue: During the initial stages of the project I encountered a server error when trying to test the site.
 
-Solution - After some tutoring, it was noticed that I had an additional Javascript bundle link included in the HTML. Once deleted, the toggler was tested, and worked.
+Solution - After some tutoring, it was noticed that I had mistakenly placed my env.py file in my_suite directory instead of the root dir.
 
-- Issue: Gaps still appearing around .row and .col classes when importing from Bootstrap whilst using the no gutters class:
+- Issue: I encountered an exe. issue when trying to test my site:
 
-Solution - Understanding Bootstrap 5, and being aware of updates. Eg. the class ".no gutters", to remove automatic padding that Bootstrap provides with .div rows and columns, became ".g-0". The solution to this was found on [Stack Overflow](https://stackoverflow.com/questions/21254889/how-to-remove-the-gutter-spacing-between-columns-in-bootstrap)
+Solution - After researching what may have been the problem, making use of the information in the Slack channels, I found that my requirements.txt needed updating
 
-- Issue: Bootstrap color automatically added when using it's .active class for the navigation bar.
+- Issue: Encountered another server problem and found that Gitpod would not allow connection to my_database through the terminal. Tried several times to connect, and double checked project files for any obvious problems.
 
-Solution - Resorted to using an !Important color in navbar CSS to overide.
+Solution - Slack channel suggested restarting Gitpod, but did not fix the problem. I decided to open a brand new workspace, and had to transfer everything over from Github. The requirements.txt and env.py files had to be recreated/updated. All imports needed re-initialisng. my_database also had to be built from scratch.
 
-- Issue: Navigation menu was not responsive when changing to different devices.
+- Issue: Wrestled with the task of storing url images in my_database, and then injecting them into my project. Over-complicated this task. I had first tried to add in the images and data from a JSON file, but wanted a much simpler solution.
 
-Solution - When trying to make the NavBar responsive via CSS, it was found that this could be done via a Bootstrap .fluid class.
+Solution - I tried adding the images as urls as suggested by a tutor, and also as files to the database, but couldn't output the images from the database. After some more research (BLOBS, BYTEA etc) and getting some help from my mentor Koko, I added the urls as .Text data in my form and Model.py file. This solved the problem. I could then display the game images correctly.
 
-- Issue: Ports not working/updating several times on Codeanywhere IDE.
+- Issue: Tried to work out how to make the Bootstrap Accordion open one review at a time, rather than all, when clicking on the displayed dropdown buttons.
 
-Solution - I regularly had to change the Port or reset to make the updates to the site work, so I could see the Website's progress.
+Solution - After a bit of research online, I found that loop.index could be utilised on the accordion buttons, giving more control over opening and closing each review.
 
-- Issue/Bug: README.md automatically began deleting itself while updating, when laptop was plugged into a smart TV.
+- Issue: The list of site games would not show correctly in the select/dropdown box on my edit_review form when editing a review.
 
-Solution - README.md had to be copied and pasted from Github repository. Some of the Readme had to be re-written.
+Solution - After re-writing my html code to make sure it was ok, as well as going back over the CI tutorials, I eventually found that I'd missed some code from the routes.py file, and hadn't declared the games variable properly when rendering the edit_review page. Once added, the edit_review form worked correctly.
+
+- Issue: Creating the star rating in edit_review. Ratings were stored in the database as opposites, 1 star was 5, 5 was 1 and so on.
+
+Solution - After some research online, I found that the values had to be written the opposite way round to reverse this. Once done, this fixed the issue.
 
 ## **Deployment**
 
-The Website was developed using Codeanywhere as the IDE, commited to Git as a local repository and finally pushed/stored to GitHub.
+The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the IDE, committed to Git as a local repository and finally pushed/stored to [GitHub](https://github.com/).
 
-### **Deployment to GitHub Pages**
+### **Deployment to Heroku**
 
-The website was deployed to Github pages using the following steps:
+The website was deployed to Heroku using the following steps:
 
-1. Log in to GitHub.
-2. Navigate to the main page of GitHub Repository that will be deployed.
-3. At the top of the Repository, locate the "Settings" button on the menu and click it.
-4. Inside the Settings, on the left side of the page, there’s a list of tab menu. Locate the “Pages” tab, and click it.
-5. Under "Source", click the dropdown called "None", select "Master", and then click the “Save” button.
-6. The page will automatically refresh.
-7. Click on Actions and then 'Deploy Static Content to Pages'
-8. There’s a notification message, your site is live at [https://coder4916.github.io/ci_milestone/], that provides the now published website on the pages tab in Github settings.
+1. Log in to 
 
 ### **Forking the Github Repository**
 
@@ -347,7 +346,7 @@ By cloning a GitHub Repository you can create a local copy on your computer of t
 7. Type git clone, and then paste the URL you copied in Step 4.
 8. Press Enter. Your local clone will be created.
 
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
 
 ## **Testing**
 
@@ -544,8 +543,7 @@ All external links/additional content was sourced via YouTube and Google Books.
 ## **Acknowledgements**
 
 - My mentor, Oluwaseun Owonikoko, for her guidance and helpful feedback on all aspects of the Website.
-- The Code Institute tutors who helped me with some of the issues I had when building the site, and for supporting me with the testing element of my Readme.md file.
-- My friend and mentor Elwyn Davies, for the site features and his continued support throughout, as well as his insight into the coaching world.
-- My wife Beth for her constant support throughout the first module, and for proof reading and testing my site material.
+- The Code Institute tutors who helped me with some of the issues I had when building the site.
+- My wife Beth for her constant support throughout, and for proof reading and testing my site material.
 
-[Back to top](#think-in-space)
+[Back to top](#the-cb-suite)
