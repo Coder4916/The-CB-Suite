@@ -468,4 +468,13 @@ footer .copyright {
     height: 320px;
 }
 
+.card-body a{
+    position:absolute;
+    display: flex;
+    bottom: 5%;
+    left:25%;
+    right:25%;
+    justify-content: center;
+}
+
 

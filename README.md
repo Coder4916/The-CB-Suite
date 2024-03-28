@@ -280,7 +280,7 @@ These features will be added where possible during further development phases:
 
 12. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
 
-13. [Heroku](https://www.heroku.com/home) was used to deploy the project
+13. [Heroku](https://www.heroku.com/home) was used to deploy the project.
 
 [Back to top](#the-cb-suite)
 
@@ -364,78 +364,45 @@ The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the ID
 - The title in the navbar leads the user back to the Home page increasing accessibility.
 - Links to further information/social media can be easily accessed via the footer.
 
-![Navigation Bar Screenshot]()
+![Navigation Bar Screenshot](/my_suite/static/img/navbar.png)
 
 2. As a first-time user, I want to know what type of games are listed on the site as required.
 
 - Visitors to the site are greeted with a Home page that contains an introductory game blog; and navbar allows the user access straight to the games page. All games are displayed in a card, with a button to review for each game. A Bootstrap Carousel was initially used both in the design phase, and in initial development, however this was removed as it was slowing access to all games. This was considered to have added some frustration to UX when displaying/reviewing the site's games.
 
-![Game Page Screenshot]()
+![Game Page Screenshot](/my_suite/static/img/games_page.png)
 
 3. As a first-time user, I want to be able to review the site's games quickly and easily 
 
 - A user can navigate easily to the games page via the navigation bar. All games are displayed in a card, with a button to review for each game.
 
-![An example of a game card]()
+![An example of a game card](/my_suite/static/img/game_card.png)
 
 4. As a first-time user, I want to be able to see my review on the site, and be able to edit if needed.
 
 - A reviews page holds all submitted reviews, and displays all reviews in a Bootstrap Accordion. The page is easily accessed via the navigation bar. Each review has an editing option available.
 
-![Reviews page and reviews accordion]()
+![Reviews page and reviews accordion](/my_suite/static/img/reviews_page.png)
 
 5. As a first-time user, I want to be able to see other user reviews on the site.
 
 - Other user reviews can be accessed via the reviews page, in the reviews accordion.
 
-![Reviews accordion; unopened]()
+![Reviews accordion; unopened](/my_suite/static/img/reviews_accordion.png)
 
 6. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
 
 - Social media links are stored in the footer.
 
-![Links]()
+![Links](/my_suite/static/img/footer_links.png)
 
 #### **Returning User Goal**
 
-1. As a returning user, I want to know if there's an FAQs page for any questions I may have.
-
-- The FAQ section on the Contact page provides the answers to some of the questions that the user might have.
-- The contact form also functions as one of the options for the user to ask questions.
-
-2. As a returning user, I want access to different ways of contacting the owner further if required.
-
-- The contact form functions as the main means of communication for the user to contact the Coach.
-- The Coach's phone number is provided in the Get In Touch section.
-- The Coach's email address is also provided in the Get In Touch section if the user prefers not to use the contact Form.
-- A social media link can also can be used as an option to contact the Coach via LinkedIn. The social media link is located in the Footer.
-
-![Returning User Screenshot](/assets/images/returning-user-stories.png)
-
-3. As a returning user I want to easily access further information as required.
-
-- For any users that want to know more about Life Coaching, there are further external links to coaching material contained in the learn-more page via a learn more link in each page's footer.
-
-![Useful Links Screenshot](/assets/images/useful-links.png)
+1. 
 
 #### **Frequent Visitor Goal**
 
-1. As a frequent user, I want to know if there will be chance to give feedback on the website.
-
-- A link to a feedback form is available in the footer.
-
-![Feedback Link Screenshot](/assets/images/feedback.png)
-
-2. As a frequent user I want to access information easily.
-
-- Access to further information is available via a learn more link in each page footer. 
-- The Contact Form can also be used to contact the Coach to find out more.
-
-3. As a frequent user I want to be able to contact the owner easily.
-
-- The Coach can be contacted via a contact form, or by phone, email, or via LinkedIn. This gives the user options, depending on what's preferable for them.
-
-![Frequent User Screenshot](/assets/images/contact-screenshot.png)
+1. 
 
 ## **Manual Testing**
 
@@ -492,11 +459,11 @@ Chrome Lighthouse testing was used to check the performance, accessibility, best
 
 - Desktop:
 
-![Think-In-Space Lighthouse testing](/assets/images/lighthouse-testing.png)
+![The CB Suite Lighthouse testing]()
 
 - Mobile:
 
-![Think-In-Space Lighthouse testing](/assets/images/lighthouse-testing-mobile.png)
+![The CB Suite Lighthouse testing]()
 
 ## **Further Testing**
 
