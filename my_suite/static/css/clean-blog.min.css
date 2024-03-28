@@ -454,3 +454,18 @@ footer .copyright {
 .star-rating input[type="radio"]:checked ~ label i{
     color: gold;
 }
+
+.card-container{
+    display: inline-block;
+}
+
+.card-img-top{
+    height: 400px;
+}
+
+.card-body{
+    position: relative;
+    height: 320px;
+}
+
+

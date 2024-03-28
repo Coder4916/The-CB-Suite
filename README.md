@@ -84,8 +84,8 @@ The main requirement of this Code Institute project was to build a responsive an
 2. As a first-time user, I want to know what type of games are listed on the site quickly and easily.
 3. As a first-time user, I want to be able to review the site's games quickly and easily 
 4. As a first-time user, I want to be able to see my review on the site, and be able to edit if needed.
-4. As a first-time user, I want to be able to see other user reviews on the site.
-5. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+5. As a first-time user, I want to be able to see other user reviews on the site.
+6. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
 
 #### **Returning User Goals**
   
@@ -93,15 +93,15 @@ The main requirement of this Code Institute project was to build a responsive an
 2. As a returning  user, I want to know what type of games are listed on the site quickly and easily.
 3. As a returning  user, I want to be able to review the site's latest games quickly and easily 
 4. As a returning  user, I want to be able to see my current and old reviews on the site, and be able to edit if needed.
-4. As a returning user, I want to be able to see other user reviews on the site.
-5. As a returning  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+5. As a returning user, I want to be able to see other user reviews on the site.
+6. As a returning  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
 
 #### **Frequent User Goal**
   
 1. As a frequent user, I want to be able to navigate the website with ease.
 2. As a frequent user I want easy access to the site's games and reviews, as well as any additional information.
 3. As a frequent user, I want to be able to see other user reviews on the site.
-3. As a frequent  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+4. As a frequent  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
 
 ### **Research**
 
@@ -244,11 +244,11 @@ These features will be added where possible during further development phases:
 
 ### **Main Languages used**
 
-[HTML5](https://en.wikipedia.org/wiki/HTML5) was used to create the front end base template of the website. A [Start Bootstrap](https://startbootstrap.com/) theme was used.
+[HTML5](https://en.wikipedia.org/wiki/HTML5) was used to create the front-end, base template of the website. A [Start Bootstrap](https://startbootstrap.com/) design theme was used for this.
 
-[CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website. Again, most of the CSS was included in the [Start Bootstrap](https://startbootstrap.com/) theme.
+[CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website. Again, most of the CSS was included in the [Start Bootstrap](https://startbootstrap.com/) theme file package.
 
-[Python](https://www.python.org/) was used to create the back-end Relational Database, declaring tables used to store game/review data using [SQLAlchemy](https://www.sqlalchemy.org/) python models. [Flask](https://flask.palletsprojects.com/en/3.0.x/) was used to inject page content into the the base.html template, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) was used to render each page based on route functions.
+[Python](https://www.python.org/) was used to create the back-end Relational Database, declaring tables used to store game/review data using Python database Models. [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) was used to render each page's content based around route functions, in order to manage the the structure of the website. Python also provided an __init__ and environment variable elements to the site.
 
 ### **Additional Languages Used**
 
@@ -260,25 +260,27 @@ These features will be added where possible during further development phases:
 
 2. [Bootstrap 5.3](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website, as well as adding components, such as a [card](https://getbootstrap.com/docs/5.3/components/card/) for each game, and [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works) for reviews.
 
-3. [Flask]
+3. [Flask](https://flask.palletsprojects.com/en/3.0.x/) reduced repitition when building the html/css site framework, and allowed back-end material to be injected into the front-end design.
 
-4. [SQLAlchemy](https://www.sqlalchemy.org/) was utilised to create each table that made up the site's back-end database.
+4. [SQLAlchemy](https://www.sqlalchemy.org/) was utilised to create each table that made up the site's back-end database. SQL commands could be used to ALTER, ADD and DROP parts of the database as required, when used in conjunction with Python Models.
 
 5. [Google Fonts](https://fonts.google.com/) provided Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif fonts for the header and titles and Lora, Times New Roman and serif fonts for the body of the site.
 
 6. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
 
-7. [Gitpod](https://gitpod.io/workspaces) IDE was used for creating the website and back end database, and using the built in terminal to push the site to GitHub for version control.
+7. [Gitpod](https://gitpod.io/workspaces) IDE was used for creating the website and back end database in the terminal, and using the built in terminal to push the site to GitHub for version control.
 
 8. [GitHub](https://github.com/) was used to store the project's code after being pushed from [Gitpod](https://gitpod.io/workspaces).
 
-9. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the initial general layout and feel of the website and the high fidelity mock up during the design process.
+9. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) were used to design the initial general layout and feel of the website.
 
 10. [Autoprefixer CSS](https://autoprefixer.github.io/) was used to add vendor prefixes to the CSS rules, to ensure that they work across all browsers.
 
 11. [Am I Responsive](https://ui.dev/amiresponsive?url=https://8002-coder4916-ci-milestone-ylxy4w9e48.us2.codeanyapp.com/index.html) was used to preview the website across a variety of popular devices.
 
 12. [Squoosh](https://squoosh.app/) was used to reduce the file size of the images, and change from .jpg to .AVIF. This helped to improve the overall performance of the website.
+
+13. [Heroku](https://www.heroku.com/home) was used to deploy the project
 
 [Back to top](#the-cb-suite)
 
@@ -290,13 +292,13 @@ Solution - After some tutoring, it was noticed that I had mistakenly placed my e
 
 - Issue: I encountered an exe. issue when trying to test my site:
 
-Solution - After researching what may have been the problem, making use of the information in the Slack channels, I found that my requirements.txt needed updating
+Solution - After researching what may have been the problem, making use of the information in the Slack channels, I found that my requirements.txt needed updating and syncing with my project.
 
-- Issue: Encountered another server problem and found that Gitpod would not allow connection to my_database through the terminal. Tried several times to connect, and double checked project files for any obvious problems.
+- Issue: When trying to begin work on my project I found that Gitpod would not allow connection to my_database via the terminal. Tried several times to connect, and double checked project files for any obvious problems.
 
-Solution - Slack channel suggested restarting Gitpod, but did not fix the problem. I decided to open a brand new workspace, and had to transfer everything over from Github. The requirements.txt and env.py files had to be recreated/updated. All imports needed re-initialisng. my_database also had to be built from scratch.
+Solution - Slack channel suggested restarting Gitpod, but this did not fix the problem. I had to open a brand new workspace, and transfer everything over from Github. The requirements.txt and env.py files had to be recreated/updated. All imports needed re-initialisng. my_database also had to be built from scratch.
 
-- Issue: Wrestled with the task of storing url images in my_database, and then injecting them into my project. Over-complicated this task. I had first tried to add in the images and data from a JSON file, but wanted a much simpler solution.
+- Issue: Wrestled with the task of storing url images in my_database, and then injecting them into my project. I had first tried to add in the images and data from a JSON file, but wanted to find a much simpler solution.
 
 Solution - I tried adding the images as urls as suggested by a tutor, and also as files to the database, but couldn't output the images from the database. After some more research (BLOBS, BYTEA etc) and getting some help from my mentor Koko, I added the urls as .Text data in my form and Model.py file. This solved the problem. I could then display the game images correctly.
 
@@ -314,37 +316,39 @@ Solution - After some research online, I found that the values had to be written
 
 ## **Deployment**
 
-The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the IDE, committed to Git as a local repository and finally pushed/stored to [GitHub](https://github.com/).
+The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the IDE, committed to Git as a local repository and finally pushed/stored to [GitHub](https://github.com/). The website was then deployed to [Heroku](https://www.heroku.com/home) using the following steps:
 
-### **Deployment to Heroku**
+### **Preparing my_database for deployment
 
-The website was deployed to Heroku using the following steps:
+1. Navigate to ElephantSQL.com and click “Log in”
+2. Select “Sign in with GitHub”
+3. Authorise ElephantSQL with a selected GitHub account
+4. Create a new team form
+5. Click “Create New Instance”
+6. Select “Select Region”
+7. Then click “Review”
+8. Check your details are correct and then click “Create instance”
+9. Return to the ElephantSQL dashboard and click on the database instance name for this project
+10. In the URL section, clicking the copy icon will copy the database URL to your clipboard
 
-1. Log in to 
+### **Project deployment to Heroku**
 
-### **Forking the Github Repository**
-
-By forking the GitHub repository you can make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository, by using the following steps:
-
-1. Log in to GitHub.
-2. Navigate to the main page of the GitHub Repository that you want to fork.
-3. At the top right of the Repository just below your profile picture, locate the "Fork" Button.
-4. You should now have a copy of the original repository in your GitHub account.  
-
-Changes made to the forked repository can be merged with the original repository via a pull request.
-
-### **Making a Local Clone**
-
-By cloning a GitHub Repository you can create a local copy on your computer of the remote repository. This allows you to make all of your edits locally rather than directly in the source files of the origin repository, by using the following steps:
-
-1. Log in to GitHub.
-2. Navigate to the main page of the GitHub Repository that you want to clone.
-3. Above the list of files, click the dropdown called "Code".
-4. To clone the repository using HTTPS, under "HTTPS", copy the link.
-5. Open Git Bash.
-6. Change the current working directory to the location where you want the cloned directory to be made.
-7. Type git clone, and then paste the URL you copied in Step 4.
-8. Press Enter. Your local clone will be created.
+1. Generate a requirements.txt file
+2. Inside the root directory of your project, create a Procfile
+3. Inside the file, add the following command: python3 run.py
+4. Open your __init__.py file
+5. Add an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
+6. To ensure that SQLAlchemy can read an external database, its URL should start with “postgresql://”, changes should not be made to this in the environment variable. Instead, make an addition to the else statement from the previous step to adjust the DATABASE_URL in case it starts with postgres://:
+7. Save all files and then add, commit and push changes to GitHub
+8. Log into Heroku.com and click “New” and then “Create a new app”
+9. Choose a unique name for the app, select a region and click “Create app”
+10. Go to the Settings tab of your new app
+11. Click Reveal Config Vars
+12. Return to your ElephantSQL tab and copy your database URL
+13. Back on Heroku, add a Config Var called DATABASE_URL and paste your ElephantSQL database URL in as the value. Make sure you click “Add”
+14. Add each of your other environment variables except DEVELOPMENT and DB_URL from the env.py file as a Config Var.
+15. Navigate to the “Deploy” tab of your app
+16. In the Deployment method section, select “Connect to GitHub”
 
 [Back to top](#the-cb-suite)
 
@@ -354,38 +358,43 @@ By cloning a GitHub Repository you can create a local copy on your computer of t
 
 #### **First Time User Goal**
 
-1. As a first-time user, I want to be able to find the information I'm looking for quickly and easily and be able to navigate the website with ease.
+1. As a first-time user, I want to be able to navigate the website with ease.
 
-- The navigation bar is clearly defined, with an .active attribute to display to the user which page they are on. A subtle hover function when the user moves the cursor over the menu items increases user friendliness, and icons are attached to each option to assist the user with their choice.
-- A logo on the top of the page and in the footer leads the user back to the Home page increasing accessibility further.
-- A 'Back to Top' button is included on every page so the user can return to the navigation bar where required.
-- Links to further information can be easily accessed via each of the page's footer menu.
+- The navigation bar is clearly defined, with a subtle hover function when the user moves the cursor over the menu items.
+- The title in the navbar leads the user back to the Home page increasing accessibility.
+- Links to further information/social media can be easily accessed via the footer.
 
-![Navigation Bar Screenshot](/assets/images/navigation-screenshot.png)
+![Navigation Bar Screenshot]()
 
-2. As a first-time user, I want to learn about the Coach/Owner and find out about their previous qualifications/experience.
+2. As a first-time user, I want to know what type of games are listed on the site as required.
 
-- The Home page contains three sections; The Coach, Background and Tried and Tested, which include information about the Coach's experience, background, qualifications and people he has helped. This is where the user will begin when arriving at the Website.
+- Visitors to the site are greeted with a Home page that contains an introductory game blog; and navbar allows the user access straight to the games page. All games are displayed in a card, with a button to review for each game. A Bootstrap Carousel was initially used both in the design phase, and in initial development, however this was removed as it was slowing access to all games. This was considered to have added some frustration to UX when displaying/reviewing the site's games.
 
-![Home Page Screenshot](/assets/images/home-page-screenshot.png)
+![Game Page Screenshot]()
 
-3. As a first-time user, I want to know what type of coaching services the Owner/Website offers.
+3. As a first-time user, I want to be able to review the site's games quickly and easily 
 
-- A second page has a 'What to Expect' section which includes a step by step guide based on an initial coaching session. A carousel also informs the reader of previous client experiences.
+- A user can navigate easily to the games page via the navigation bar. All games are displayed in a card, with a button to review for each game.
 
-![Coaching Page Screenshot](/assets/images/coaching-page-screenshot.png)
+![An example of a game card]()
 
-4. As a first-time user, I want to be able to locate the owner's social media links to see their followings and find any potential reviews etc.
+4. As a first-time user, I want to be able to see my review on the site, and be able to edit if needed.
 
-- The Coach's LinkedIn profile is attached to the footer. There is also a carousel on the coaching page which displays previous client reviews.
+- A reviews page holds all submitted reviews, and displays all reviews in a Bootstrap Accordion. The page is easily accessed via the navigation bar. Each review has an editing option available.
 
-![Footer Screenshot](/assets/images/footer-screenshot.png)
+![Reviews page and reviews accordion]()
 
-5. As a first-time user, I want to have the option to contact the owner further if required.
+5. As a first-time user, I want to be able to see other user reviews on the site.
 
-- A contact form and the Coach's contact details are available on a Contact page on the website. A link to this is included in the footer of each page, as well as via the navigation bar.
+- Other user reviews can be accessed via the reviews page, in the reviews accordion.
 
-![Contact Page Screenshot](/assets/images/contact-screenshot.png)
+![Reviews accordion; unopened]()
+
+6. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+
+- Social media links are stored in the footer.
+
+![Links]()
 
 #### **Returning User Goal**
 
