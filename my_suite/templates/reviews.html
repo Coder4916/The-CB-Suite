@@ -7,7 +7,7 @@
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{loop.index}}"
         aria-expanded="True" aria-controls="collapse">
-        <span><strong>{{ review.game }} - reviewed by: </strong>{{ review.username }}<strong> On: </strong>{{ review.date }}</span>
+        <span><strong>{{ review.game }} - reviewed by: </strong><em>{{ review.username }}</em><strong> On: </strong><em>{{ review.date }}</em></span>
       </button>
     </h2>
     <div id="collapse-{{loop.index}}" class="accordion-collapse collapse" data-bs-parent="#myaccordion">

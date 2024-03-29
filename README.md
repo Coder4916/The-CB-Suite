@@ -398,11 +398,11 @@ The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the ID
 
 #### **Returning User Goal**
 
-1. 
+1. (Refer to first time user goals)
 
 #### **Frequent Visitor Goal**
 
-1. 
+1. As above.
 
 ## **Manual Testing**
 
@@ -412,13 +412,13 @@ I used web developer tools extensively throughout the project to update and corr
 
 Below are some examples of sections that I have tested and checked for full responsiveness on all devices. These images show the sections at each [Breakpoint](https://getbootstrap.com/docs/5.3/layout/breakpoints/#core-concepts).
 
-![Header](/assets/images/header-responsive.png)
+![Header]()
 
-![Form](/assets/images/form-responsive.png)
+![Form]()
 
-![Background Section](/assets/images/background-responsive.png)
+![Background Section]()
 
-![Footer](/assets/images/footer-responsive.png)
+![Footer]()
 
 ### **Links Testing**
 
@@ -430,8 +430,8 @@ Hovering and Active states are working.
 
 ### **Forms Testing**
 
-The Think-In-Space Form was also tested to make sure that
-the required fields are working, and the form sends the input data correctly.
+The CB Suite edit and add_review forms were tested to make sure that
+the required fields are working, the create and update and the form POSTs the input data correctly to the site.
 
 ![Input Data sent to CI mock server](/assets/images/ci-confirm-form.png)
 
@@ -455,15 +455,15 @@ The images below are snapshots of each page of the website after the code has be
 
 ## **Lighthouse Testing**
 
-Chrome Lighthouse testing was used to check the performance, accessibility, best practices, and SEO. After applying some changes to make the performance faster, including resizing all of the images, compressing image/changing the file size and adding a rel=noopener to all external links, the results below were achieved:
+Chrome Lighthouse testing was used to check the performance, accessibility, best practices, and SEO. After applying some changes to make the performance faster, including compression and resizing of images, the results below were achieved:
 
 - Desktop:
 
-![The CB Suite Lighthouse testing]()
+![The CB Suite Lighthouse testing](/my_suite/static/img/desktop-lh.png)
 
 - Mobile:
 
-![The CB Suite Lighthouse testing]()
+![The CB Suite Lighthouse testing](/my_suite/static/img/mobile-lh.png)
 
 ## **Further Testing**
 
