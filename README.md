@@ -316,7 +316,7 @@ Solution - After some research online, I found that the values had to be written
 
 - Issue: The main site header image in the base.html file flagged up a few problems in the terminal. When I researched this in slack, it was found that this was a problem with Gitpod not recognising the code in the IDE.
 
-Solution - Double checked the above in slack. image continued to work when tested, regardless of problems raised by Gitpod.
+Solution - Double checked the above in slack. Tried making adjustments as per terminal instructions, did not remove the problems from terminal. Image continued to work when tested, regardless of problems raised by Gitpod.
 
 ## **Deployment**
 

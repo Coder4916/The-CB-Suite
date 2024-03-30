@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+<!-- Bootstrap 5.3 accordion used to display reviews added to the site/my_database-->
 <div class="accordion" id="myaccordion">
   {% for review in reviews %}
   <div class="accordion-item">
@@ -25,7 +27,7 @@
       </div>
     </div>
   </div>
-  <!-- Bootstrap 5.3 Modal -->
+  <!-- Bootstrap 5.3 Modal - created in conjunction with the delete_review function in routes.py -->
   <div class="modal fade" id="my-static-modal-{{ review.id }}" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/bestgame.avif') }}">
 
     <!--links to vendor file downloaded from Start Bootstrap-->
@@ -30,6 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <!--  -->
                         <a class="nav-link" href="{{  url_for('home')}}">Home</a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +45,7 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
+    <!-- Start Bootstrap Page Header -->
     <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/gaming.avif') }}')">
         <div class="overlay"></div>
         <div class="container">
@@ -63,7 +65,7 @@
         {% endblock %}
     </main>
 
-    <!-- Footer -->
+    <!-- Start Bootstrap Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -110,7 +112,7 @@
     <!-- Font Awesome script -->
     <script src="https://kit.fontawesome.com/307651c16d.js" crossorigin="anonymous"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts for my site -->
     <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
     <script>
         $("#copyright").text(new Date().getFullYear())
