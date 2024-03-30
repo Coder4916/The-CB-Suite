@@ -314,6 +314,10 @@ Solution - After re-writing my html code to make sure it was ok, as well as goin
 
 Solution - After some research online, I found that the values had to be written the opposite way round to reverse this. Once done, this fixed the issue.
 
+- Issue: The main site header image in the base.html file flagged up a few problems in the terminal. When I researched this in slack, it was found that this was a problem with Gitpod not recognising the code in the IDE.
+
+Solution - Double checked the above in slack. image continued to work when tested, regardless of problems raised by Gitpod.
+
 ## **Deployment**
 
 The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the IDE, committed to Git as a local repository and finally pushed/stored to [GitHub](https://github.com/). The website was then deployed to [Heroku](https://www.heroku.com/home) using the following steps:
@@ -410,22 +414,30 @@ The Website was developed using [Gitpod](https://gitpod.io/workspaces) as the ID
 
 I used web developer tools extensively throughout the project to update and correct code, adjust website aesthetics, and check/improve and confirm responsiveness accross all devices, using a Bootstrap 'Mobile First' approach.
 
-Below are some examples of sections that I have tested and checked for full responsiveness on all devices. These images show the sections at each [Breakpoint](https://getbootstrap.com/docs/5.3/layout/breakpoints/#core-concepts).
+Below are some examples of areas of the site that I have tested and checked for full responsiveness on all devices. These images show the sections at each [Breakpoint](https://getbootstrap.com/docs/5.3/layout/breakpoints/#core-concepts).
 
-![Header]()
+![Header-sm](/my_suite/static/img/header-sm.png)
 
-![Form]()
+![Header-md](/my_suite/static/img/header-md.png)
 
-![Background Section]()
+![Header-lg](/my_suite/static/img/header-lg.png)
 
-![Footer]()
+![Header-xlg](/my_suite/static/img/header-xlg.png)
+
+![games-sm](/my_suite/static/img/games-sm.png)
+
+![games-md](/my_suite/static/img/games-md.png)
+
+![games-lg](/my_suite/static/img/games-lg.png)
+
+![games-xlg](/my_suite/static/img/games-xlg.png)
 
 ### **Links Testing**
 
 Once deployed, the website links were tested to ensure that:
 
 All navigation external/internal links are working correctly.
-The social media button and the learn more page links are working and opening in a new tab. All links were working and set to a relative filepath.
+The social media links are working and opening in a new tab.
 Hovering and Active states are working.
 
 ### **Forms Testing**

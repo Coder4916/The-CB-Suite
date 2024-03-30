@@ -471,8 +471,8 @@ footer .copyright {
     position:absolute;
     display: flex;
     bottom: 5%;
-    left:25%;
-    right:25%;
+    left:15%;
+    right:15%;
     justify-content: center;
 }
 
