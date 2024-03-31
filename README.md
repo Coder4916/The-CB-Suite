@@ -1,6 +1,6 @@
 # **The CB Suite**
 
-![The CB Suite image]()
+![The CB Suite image](/my_suite/static/img/amiresponsive.png)
 
 ## **Table of Contents**
 
@@ -204,21 +204,21 @@ I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer g
 
 - The header consists of a [main image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/), title and navigation bar. The nav-bar includes three nav-links on the right hand side that link to each site page. The header occupies 100% width of the site.
 
-- The navigation bar is fully responsive on all device sizes. On desktop view, the user will be able to see all nav-links, while on a smaller device, these collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
+- The navigation bar is fully responsive on all device sizes. On desktop view, the user can see all nav-links, while on a smaller device, these collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
 
-- The Nav-links have a subtle hover state when the user hovers over each link, and include a [Bootstrap](https://getbootstrap.com/docs/5.3/components/list-group/#active-items) .active class to show which page the user is on.
+- The Nav-links have a subtle hover state when the user hovers over each link.
 
 #### 2. **Home Page**
 
-- The Home Page includes a title and sub-title to introduce the user, and a blog element to complement the site's game theme. The template is taken from a base.html file within the CB-Suite project package, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the each site page in the browser.
+- The Home Page includes a title and sub-title to introduce the user, and a blog element to compliment the site's game theme. The template is taken from a base.html file within the CB-Suite project package, and [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render each site page in the browser.
 
 #### 3. **Games Page**
 
-- The Games Page contains all games that the user will have the option to review, each set within a [Bootstrap card](https://getbootstrap.com/docs/5.3/components/card/#about) and housed within a [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works). Information about each game is stored in a POSTGRES Database and displayed using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will taken from a base.html file within the project file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the page in the browser.
+- The Games Page contains all games that the user will have the option to review, each set within a [Bootstrap card](https://getbootstrap.com/docs/5.3/components/card/#about) and housed within a [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works). Information about each game is stored in a POSTGRES Database and displayed using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will taken from a base.html file within the project file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the page in the browser. [BAFTA games awards](https://www.bafta.org/games) was used for guidance when adding game content to the site.
 
 #### 4. **Reviews Page**
 
-The Reviews Page will display any reviews added to the site by a user. Reviews will be stored in a table in a POSTGRES database, my_suite, and displayed to the page using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template will also be taken from a base.html file within the CB-Suite file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) will be used to render the template in the browser.
+The Reviews Page displays any reviews that have been added to the site by the user. Reviews are also stored in a table in a POSTGRES database, my_suite, and displayed to the page using [Flask](https://flask.palletsprojects.com/en/3.0.x/). The page template is also taken from a base.html file within the CB-Suite file package, and [routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) is used to render the template in the browser. A simple [star rating system](https://www.youtube.com/watch?v=0q6neX8jd44&t=69s) is included in the add_review form. [Den of Geek](https://www.denofgeek.com/games/reviews/) was used to get a general idea for the layout/aesthetics.
 
 #### 5. **Footer**
 
@@ -436,34 +436,21 @@ Below are some examples of areas of the site that I have tested and checked for 
 
 Once deployed, the website links were tested to ensure that:
 
-All navigation external/internal links are working correctly.
-The social media links are working and opening in a new tab.
-Hovering and Active states are working.
+- All navigation external/internal links are working correctly, and filepaths are correct.
+- The social media links are working and opening in a new tab.
+- Hovering and Active states are working.
 
 ### **Forms Testing**
 
-The CB Suite edit and add_review forms were tested to make sure that
-the required fields are working, the create and update and the form POSTs the input data correctly to the site.
+The CB Suite edit and add_review forms were tested to make sure that the required fields are working, and that the create and update and the form POSTs any input data correctly to the site. I have also included an image of the games added to the database using forms.
 
-![Input Data sent to CI mock server](/assets/images/ci-confirm-form.png)
+![Example of form data successfully posted to my_database](/my_suite/static/img/mydatabase-review.png)
+
+![Example of form data successfully posted to my_database](/my_suite/static/img/mydatabase-game.png)
 
 ## **Autoprefixer CSS**
 
 Autoprefixer CSS was used to add CSS vendor prefixes to the CSS rules after the developing process was done and the CSS was validated, to ensure that they work across all browsers.
-
-## **W3C Validator Testing**
-
-The [W3C Markup Validator](https://validator.w3.org/) and W3C CSS Validator Services were used to validate the website to ensure there were no syntax errors in the project.
-
-The images below are snapshots of each page of the website after the code has been put through the Validator.
-
-![W3C Markup Validator](/assets/images/index.html-checked.png)
-
-![W3C Markup Validator](/assets/images/coaching.html-checked.png)
-
-![W3C Markup Validator](/assets/images/contact.html-checked.png)
-
-![W3C Markup Validator](/assets/images/style.css-checked.png)
 
 ## **Lighthouse Testing**
 
@@ -479,7 +466,7 @@ Chrome Lighthouse testing was used to check the performance, accessibility, best
 
 ## **Further Testing**
 
-The Website was tested on Google Chrome, Microsoft Edge and Mozilla Firefox. Microsoft Edge required extensions to run the site images correctly.
+The Website was tested on Google Chrome, Microsoft Edge and Mozilla Firefox.
 
 The website was viewed on a variety of devices such as:
 
@@ -493,36 +480,40 @@ Friends and family members were asked to review the site and documentation to po
 
 ### **Code**
 
-1. [Bootstrap 5.3](https://getbootstrap.com/): Bootstrap was used extensively throughout the project, including the following components:
+1. The [Code Institute Walkthrough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DIWADRDB+2022_Q3/courseware/c0c31790fcf540539fd2bd3678b12406/6e44128b0b37416ab40c1a87ef2cb32a/) was used extensively to guide me through the creation of my site, through to project completion.
 
-- [A collapsible and expandable navigation bar](https://getbootstrap.com/docs/5.3/components/navbar/#toggler)
-- [A Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+2. [Bootstrap 5.3](https://getbootstrap.com/): Bootstrap was used extensively throughout the project, including the use of the following components:
+
+- [Cards for each game](https://getbootstrap.com/docs/5.3/components/card/#about)
+- [A Carousel (In the initial design stage)](https://getbootstrap.com/docs/5.3/components/carousel/)
 - [A Bootstrap grid system](https://getbootstrap.com/docs/5.3/layout/grid/#example)
+- [A Bootstrap Accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works)
 
-2. [stackoverflow](https://stackoverflow.com/questions/21254889/how-to-remove-the-gutter-spacing-between-columns-in-bootstrap): Was used to find solutions to problems/issues when building the website, for example, finding out more information about an update when removing Bootstrap padding in a grid system.
+3. [stackoverflow](https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GwcGy0TWHr4Xg0bldUwSZjn60NaaP0w7oL_qF8TbqwyaGXH6KOPf-jkaAk0jEALw_wcB) was used to find solutions to problems/issues when building the website, for example, finding out [more information](https://stackoverflow.com/questions/69673044/why-my-rating-is-going-reverse-direction) when trying to create a star rating system in the add_review page. 
 
-3. [w3Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Was used to get assitance with creating the website, for example when creating the 'back to top' button using pure CSS.
+4. [w3Schools](https://www.w3schools.com/) was used to get assitance with postgreSQL statements when manipulating data/tables in my_database.
 
-4. [Autoprefixer CSS](https://autoprefixer.github.io/):
-Was used to add different vendor prefixer to CSS.
+5. [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) was also used to get help with different statements/commands when trying to manipulate my_database. This included deleting the entire database, deleting and adding columns, and altering the data in a column.
+
+6. [Autoprefixer CSS](https://autoprefixer.github.io/): was used to add different vendor prefixer to CSS.
+
+7. [Youtube tutorials](https://www.youtube.com/watch?v=0q6neX8jd44&t=69s) were used to help create certain aspects of the site, including a simple star rating system.
 
 ### **Images**
 
-The Coach created the Website Logo using [Hatchful by Shopify](https://www.shopify.com/tools/logo-maker?syclid=ckaok3ausvis73ecc1gg&utm_campaign=Hatchful&utm_content=Onboarding_1&utm_medium=email&utm_source=mozart).
+I used this [image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) by [Athena](https://www.pexels.com/@athena/), which was sourced from Pexels for the header of each site page.
 
-I used the following image, sourced from [Pexels](https://www.pexels.com/) for the background of each site page:
+The following images I sourced from various sites to use for my game cards:
 
-[Close up photo of pebbles image; by Ave Calvar Martinez](https://www.pexels.com/photo/close-up-photo-of-pebbles-3010168/)
+[Etsy image](https://www.etsy.com/uk/listing/1514733901/super-mario-wonder-poster-2?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_uk_en_gb_c-art_and_collectibles-prints-digital_prints&utm_custom1=_k_Cj0KCQjwqpSwBhClARIsADlZ_TlySr5JO1I4H-_Px_v7eXiz3FL1ViaL9xbqCVQTXdpjAz4fMwt3Gf0aAi6zEALw_wcB_k_&utm_content=go_12604170148_121488004522_508814058911_pla-328046931108_c__1514733901engb_102858184&utm_custom2=12604170148&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_TlySr5JO1I4H-_Px_v7eXiz3FL1ViaL9xbqCVQTXdpjAz4fMwt3Gf0aAi6zEALw_wcB); used for the Super Mario game card.
 
-The following images Elwyn and I sourced from [Burst](https://www.shopify.com/stock-photos/photos/senior-teaching-young-man?c=teacher) and [Pexels](https://www.pexels.com/) to populate each page section:
+[CD keys images](https://www.cdkeys.com/star-wars-jedi-survivor-pc-origin?__currency=gbp&gad_source=1&irclickid=xXpWqtXYmxyPUR9RiQWj01vfUkHUPSSG51yfS40&utm_source=impact&utm_medium=affiliate&utm_campaign=razorcreations&irgwc=1); used for Star Wars, Streetfighter and Resident Evil game cards.
 
-[Senior teaching young man; by Shopify](https://www.shopify.com/stock-photos/photos/senior-teaching-young-man?c=teacher)
+[Gaming deals images](https://www.gamingdeals.com/games/marvels-spider-man-2/?edition=Standard+Edition&platform=PS5&track=css_pages&utm_source=google&utm_medium=css_pages&utm_campaign=comparison&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_Tl9-y7izhY2hj-AO04YcCnGJiaPeoh_k28g17EuIXg1xbKJn6BqVn8aAsdYEALw_wcB); used for the Spider Man and Final Fantasy cards.
 
-[Hiker climbing mountains; by Brodie](https://www.shopify.com/stock-photos/photos/hiker-climbing-mountains?c=landscape)
+[Infinite Bargains image](https://infinite-bargains.co.uk/products/harry-potter-hogwarts-legacy-maxi-poster-print-61x91-5cm?variant=47551905530169&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_TlDyj48hEt7DcIKLn8ePMIZfBlXjEhMhom8Q0CERBJG1laTeqYqtAYaAhQQEALw_wcB); used for the Hogwarts game card.
 
-[Question Marks; by Leeloo TheFirst](https://www.pexels.com/photo/question-marks-on-paper-crafts-5428836/)
-
-All other photos/images used were sourced from Elwyn's photo gallery. They are images of local available Blue/Green space, which Elwyn is planning on using for his clientele.
+All other game card images were sourced from [Wikipedia](https://en.wikipedia.org/wiki/Alan_Wake_2).
 
 ### **Additional contents**
 
