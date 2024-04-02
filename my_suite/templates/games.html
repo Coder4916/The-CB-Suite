@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Commented out for use in later development
 <a type="button" href="{{ url_for('add_game') }}" class="btn btn-large btn-primary">Add
   Game</a>
+  -->
 
 <!-- Game card which displays all the game info from my_database-->
 <div id="row g-0 d-flex">
@@ -20,9 +22,11 @@
                 Review</a>
           </div>
         </div>
+        <!-- Commented out for use in later development
         <span>
           <a type="button" href="{{ url_for('edit_game', game_id=game.id) }}" class="btn btn-warning">Edit game</a>
         </span>
+        -->
     </div>
     {% endfor %}
 </div>
