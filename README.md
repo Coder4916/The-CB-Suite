@@ -8,11 +8,11 @@
   - [**Table of Contents**](#table-of-contents)
   - [**Introduction**](#introduction)
   - [**UX Development**](#ux-development)
-    - [**1. Strategy Plane**](#1-strategy-plane)
+    - [1. **Strategy Plane**](#1-strategy-plane)
     - [**User Stories**](#user-stories)
       - [**First Time User Goals**](#first-time-user-goals)
       - [**Returning User Goals**](#returning-user-goals)
-      - [**Frequent User Goal**](#frequent-user-goal)
+      - [**Frequent User Goals**](#frequent-user-goal)
     - [**Research**](#research)
     - [**Project Goals**](#project-goals)
     - [**User Goals**](#user-goals)
@@ -28,11 +28,10 @@
   - [**Features**](#features)
     - [**Current Features**](#current-features)
       - [1. **Header**](#1-header)
-      - [2. **About me page**](#2-about-me-page)
-      - [3. **Coaching Page**](#3-coaching-page)
-      - [4. **Contact Page**](#4-contact-page)
-      - [5. **Footer**](#5-footer)
-      - [6. **Learn more Page**](#6-learn-more-page)
+      - [2. **Home Page**](#2-home-page)
+      - [3. **Games Page**](#2-games-page)
+      - [4. **Reviews Page**](#3-reviews-page)
+      - [5. **Footer**](#4-footer)
     - [**Features to be added in the future**](#features-to-be-added-in-the-future)
   - [**Technologies Used**](#technologies-used)
     - [**Main Languages used**](#main-languages-used)
@@ -40,9 +39,8 @@
     - [**Frameworks, Libraries and Programs Used**](#frameworks-libraries-and-programs-used)
   - [**Issues and Bugs**](#issues-and-bugs)
   - [**Deployment**](#deployment)
-    - [**Deployment to GitHub Pages**](#deployment-to-github-pages)
-    - [**Forking the Github Repository**](#forking-the-github-repository)
-    - [**Making a Local Clone**](#making-a-local-clone)
+    - [**Preparing my_database for deployment**](#preparing-my_database-for-deployment)
+    - [**Project deployment to Heroku**](#project-deployment-to-heroku)
   - [**Testing**](#testing)
     - [**User Stories Testing**](#user-stories-testing)
       - [**First Time User Goal**](#first-time-user-goal)
@@ -74,7 +72,7 @@ The main requirement of this Code Institute project was to build a responsive an
 
 ## **UX Development**
 
-### **1. Strategy Plane**
+### 1. **Strategy Plane**
 
 ### **User Stories**
 
@@ -96,7 +94,7 @@ The main requirement of this Code Institute project was to build a responsive an
 5. As a returning user, I want to be able to see other user reviews on the site.
 6. As a returning  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
 
-#### **Frequent User Goal**
+#### **Frequent User Goals**
   
 1. As a frequent user, I want to be able to navigate the website with ease.
 2. As a frequent user I want easy access to the site's games and reviews, as well as any additional information.
@@ -188,11 +186,11 @@ The aesthetics used are primarily derived from the [Clean Blog](https://startboo
 
 #### **Typography**
 
-The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/), [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
+The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/) [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
 
 #### **Imagery**
 
-I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer gadets on a table](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) for the main image. A fallback color is included in the [Start Bootstrap](https://startbootstrap.com/) package, which will be added to the body if the main image doesn't load.
+I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer gadgets on a table](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) for the main image. A fallback color is included in the [Start Bootstrap](https://startbootstrap.com/) package, which will be added to the body if the main image doesn't load.
 
 [Back to top](#the-cb-suite)
 
@@ -248,11 +246,11 @@ These features will be added where possible during further development phases:
 
 [CSS3](https://en.wikipedia.org/wiki/CSS) was used to design the layout and aesthetics of the website. Again, most of the CSS was included in the [Start Bootstrap](https://startbootstrap.com/) theme file package.
 
-[Python](https://www.python.org/) was used to create the back-end Relational Database, declaring tables used to store game/review data using Python database Models. [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) was used to render each page's content based around route functions, in order to manage the the structure of the website. Python also provided an __init__ and environment variable elements to the site.
+[Python](https://www.python.org/) was used to create the back-end Relational Database, declaring tables used to store game/review data using Python database Models. [Routing](https://www.tutorialspoint.com/python_network_programming/python_routing.htm) was used to render each page's content based around route functions, in order to manage the structure of the website. Python also provided an __init__ and environment variable elements to the site.
 
 ### **Additional Languages Used**
 
-[Javascript](https://en.wikipedia.org/wiki/JavaScript) controls the function of the navigation bar, and scripts are added to control [date output](https://www.w3schools.com/jsref/jsref_getfullyear.asp) in the footer of each page
+[Javascript](https://en.wikipedia.org/wiki/JavaScript) controls the function of the navigation bar, and scripts are added to control the site's [date](https://www.w3schools.com/jsref/jsref_getfullyear.asp) in the footer of each page
 
 ### **Frameworks, Libraries and Programs Used**
 
@@ -450,7 +448,13 @@ The CB Suite edit and add_review forms were tested to make sure that the require
 
 ## **Autoprefixer CSS**
 
-Autoprefixer CSS was used to add CSS vendor prefixes to the CSS rules after the developing process was done and the CSS was validated, to ensure that they work across all browsers.
+Autoprefixer CSS was used to add CSS vendor prefixes to the CSS rules after the developing process was completed.
+
+## **W3C Validator Testing**
+
+The following image shows the CSS code placed into the W3C validator testing app to check for any incorrect code. There were no errors or warnings to show:
+
+![CSS checked](/my_suite/static/img/cssw3c.png)
 
 ## **Lighthouse Testing**
 
@@ -485,19 +489,20 @@ Friends and family members were asked to review the site and documentation to po
 2. [Bootstrap 5.3](https://getbootstrap.com/): Bootstrap was used extensively throughout the project, including the use of the following components:
 
 - [Cards for each game](https://getbootstrap.com/docs/5.3/components/card/#about)
-- [A Carousel (In the initial design stage)](https://getbootstrap.com/docs/5.3/components/carousel/)
-- [A Bootstrap grid system](https://getbootstrap.com/docs/5.3/layout/grid/#example)
+- [Bootstrap grid system](https://getbootstrap.com/docs/5.3/layout/grid/#example)
 - [A Bootstrap Accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works)
 
-3. [stackoverflow](https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GwcGy0TWHr4Xg0bldUwSZjn60NaaP0w7oL_qF8TbqwyaGXH6KOPf-jkaAk0jEALw_wcB) was used to find solutions to problems/issues when building the website, for example, finding out [more information](https://stackoverflow.com/questions/69673044/why-my-rating-is-going-reverse-direction) when trying to create a star rating system in the add_review page. 
+3. [Stackoverflow](https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GwcGy0TWHr4Xg0bldUwSZjn60NaaP0w7oL_qF8TbqwyaGXH6KOPf-jkaAk0jEALw_wcB) was used to find solutions to problems/issues when building the website, for example, finding out [more information](https://stackoverflow.com/questions/69673044/why-my-rating-is-going-reverse-direction) when trying to create a star rating system in the add_review page. 
 
-4. [w3Schools](https://www.w3schools.com/) was used to get assitance with postgreSQL statements when manipulating data/tables in my_database.
+4. [W3Schools](https://www.w3schools.com/) was used to get assitance with postgreSQL statements when manipulating data/tables in my_database.
 
 5. [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) was also used to get help with different statements/commands when trying to manipulate my_database. This included deleting the entire database, deleting and adding columns, and altering the data in a column.
 
 6. [Autoprefixer CSS](https://autoprefixer.github.io/): was used to add different vendor prefixer to CSS.
 
-7. [Youtube tutorials](https://www.youtube.com/watch?v=0q6neX8jd44&t=69s) were used to help create certain aspects of the site, including a simple star rating system.
+7. [W3C Validator Testing](https://validator.w3.org/nu/#textarea) was used to check for any errors in my CSS code.
+
+8. [Youtube tutorials](https://www.youtube.com/watch?v=0q6neX8jd44&t=69s) were used to help create certain aspects of the site, including a simple star rating system.
 
 ### **Images**
 
@@ -517,7 +522,7 @@ All other game card images were sourced from [Wikipedia](https://en.wikipedia.or
 
 ### **Additional contents**
 
-All external links/additional content was sourced via YouTube and Google Books.
+The external links included in the blog page include [The Gamer](https://www.thegamer.com/best-pc-exploration-games/#avatar-frontiers-of-pandora), [nature](https://www.nature.com/articles/d41586-023-00065-6), and [philoso?hy Talk](https://www.philosophytalk.org/blog/game-or-not-game)
 
 ## **Acknowledgements**
 

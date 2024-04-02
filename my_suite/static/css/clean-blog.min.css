@@ -1,9 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*!
  * Start Bootstrap - Clean Blog v5.0.10 (https://startbootstrap.com/theme/clean-blog)
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
  */
-body {
+ body {
     font-size: 20px;
     font-family: Lora, 'Times New Roman', serif
 }
@@ -29,6 +36,8 @@ h6 {
 
 a {
     color: #212529;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s
 }
 
@@ -142,8 +151,11 @@ img::-moz-selection {
 
 @media only screen and (min-width:992px) {
     #mainNav {
+        -webkit-transition: background-color .2s;
+        -o-transition: background-color .2s;
         transition: background-color .2s;
-        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden
     }
@@ -151,7 +163,11 @@ img::-moz-selection {
     #mainNav.is-fixed {
         position: fixed;
         top: -67px;
+        -webkit-transition: -webkit-transform .2s;
+        transition: -webkit-transform .2s;
+        -o-transition: transform .2s;
         transition: transform .2s;
+        transition: transform .2s, -webkit-transform .2s;
         border-bottom: 1px solid #fff;
         background-color: rgba(255, 255, 255, .9)
     }
@@ -175,7 +191,8 @@ img::-moz-selection {
     }
 
     #mainNav.is-visible {
-        transform: translate3d(0, 100%, 0)
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0)
     }
 }
 
@@ -344,7 +361,8 @@ header.masthead .post-heading .meta a {
     border: none;
     border-radius: 0;
     background: 0 0;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     font-family: Lora, 'Times New Roman', serif
 }
 
@@ -362,6 +380,8 @@ header.masthead .post-heading .meta a {
     top: 2em;
     display: block;
     margin: 0;
+    -webkit-transition: top .3s ease, opacity .3s ease;
+    -o-transition: top .3s ease, opacity .3s ease;
     transition: top .3s ease, opacity .3s ease;
     opacity: 0
 }
@@ -426,11 +446,18 @@ footer .copyright {
     padding: 25px 35px
 }
 
-/* Custom CSS for my_suite */
+/* Custom CSS included in my_suite */
 
 .star-rating{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
     font-size: larger;
     padding: 1%;
@@ -469,11 +496,13 @@ footer .copyright {
 
 .card-body a{
     position:absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     bottom: 5%;
     left:15%;
     right:15%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
-
-
