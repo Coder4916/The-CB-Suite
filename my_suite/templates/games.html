@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+<a type="button" href="{{ url_for('add_game') }}" class="btn btn-large btn-primary">Add
+  Game</a>
+
 <!-- Game card which displays all the game info from my_database-->
 <div id="row g-0 d-flex">
     {% for game in games %}

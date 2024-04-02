@@ -17,6 +17,49 @@ def games():
     return render_template("games.html", page_title="Games", games=games)
 
 
+#Function to render add_game template with a POST method to add game data
+@my_app.route("/add_game", methods=["GET", "POST"])
+def add_game():
+    if request.method == "POST":
+        game = Game(
+            name=request.form.get("name"),
+            genre=request.form.get("genre"),
+            platform=request.form.get("platform"),
+            developer=request.form.get("developer"),
+            release_date=request.form.get("release_date"),
+            image=request.form.get("image")
+        )
+        my_database.session.add(game)
+        my_database.session.commit()
+        return redirect(url_for("games"))
+    return render_template("add_game.html", page_title="Add Game")
+    
+
+#Function to render edit_game template and gets the selected game to edit
+@my_app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
+def edit_game(game_id):
+    game = Game.query.get_or_404(game_id)
+    if request.method == "POST":
+        game.name = request.form.get("name"),
+        game.genre = request.form.get("genre"),
+        game.platform = request.form.get("platform"),
+        game.developer = request.form.get("developer"),
+        game.release_date = request.form.get("release_date"),
+        game.image = request.form.get("image")
+        my_database.session.commit()
+        return redirect(url_for("games"))
+    return render_template("edit_game.html", page_title="Edit game", game=game)
+
+
+#Function to delete_game
+@my_app.route("/delete_game/<int:game_id>")
+def delete_game(game_id):
+    game = Game.query.get_or_404(game_id)
+    my_database.session.delete(game)
+    my_database.session.commit()
+    return redirect(url_for("games"))
+
+
 # Function to render reviews template, 
 # getting all reviews from my_database
 # that have been added to the site and 

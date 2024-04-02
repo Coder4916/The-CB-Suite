@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row card container-fluid mx-auto" style="width:66%">
+    <fieldset>
+        <legend>{{ page_title }}</legend>
+        <form class="col form-card pt-3" method="POST" action="{{ url_for('add_game') }}">
+            
+            <!-- Game name input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-gamepad"></i></span>
+                <div class="form-floating">
+                    <input type="text" name="name" class="form-control validate" id="name">
+                </input>
+                    <label for="name">Game Name</label>
+                </div>
+            </div>
+            <!-- Game genre input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-list"></i></span>
+                <div class="form-floating">
+                    <input id="genre" name="genre" class="validate form-control" required>
+                </input>
+                    <label for="game_id">Genre</label>
+                </div>
+            </div>
+            <!-- Game platform input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-laptop"></i></span>
+                <div class="form-floating">
+                    <input id="platform" name="platform" type="text" class="validate form-control" required>
+                </input>
+                    <label for="platform">Platform</label>
+                </div>
+            </div>
+            <!-- Game developer input -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-code"></i></span>
+                <div class="form-floating">
+                    <input id="developer" name="developer" type="text" class="validate form-control" required>
+                </input>
+                    <label for="developer">Developer</label>
+                </div>
+            </div>
+            <!-- Game release date -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-regular fa-calendar-days prefix"></i></span>
+                <div class="form-floating">
+                    <input id="release_date" name="release_date" type="text" class="validate form-control" required>
+                </input>
+                    <label for="release_date">Release Date</label>
+                </div>
+            </div>
+            <!-- Game image -->
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-image"></i></span>
+                <div class="form-floating">
+                    <input id="image" name="image" type="text" class="validate form-control" required>
+                </input>
+                    <label for="image">Game Image</label>
+                </div>
+            </div>
+            <!-- Game submit button -->
+            <div class="row">
+                <div class="col-sm-12 text-center p-3">
+                    <button type="submit" class="btn btn-large btn-primary">
+                        Add Game
+                    </button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+    
+</div>
+
+{% endblock %}
